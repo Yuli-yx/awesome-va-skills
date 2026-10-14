@@ -1,0 +1,7 @@
+interface:
+  display_name: "PD 分离 DFX 工作台"
+  short_description: "增量登记历史问题并经用户审核后维护PD侧DFX能力"
+  default_prompt: "使用 $pd-dfx-workbench 导入新的PD历史问题，并在写入DFX能力前生成待我审核的决策包。"
+
+policy:
+  allow_implicit_invocation: true

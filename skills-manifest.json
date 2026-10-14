@@ -1,0 +1,262 @@
+{
+  "collected_on": "2026-10-14",
+  "selection": "One canonical package per skill name; current workspace preferred; transport development included as companion skills.",
+  "skills": [
+    {
+      "name": "aisbench-accuracy",
+      "path": ".agents/skills/aisbench-accuracy",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 2,
+      "package_sha256": "5f64eaf696aa4981c0df26e280de397118fbb834dce40b143183de32a0081b4e"
+    },
+    {
+      "name": "ascend-memory-profiling",
+      "path": ".agents/skills/ascend-memory-profiling",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 7,
+      "package_sha256": "964b8677957bb35e613c8be055a96873567ff170741ecc13d109a96478eb6d90"
+    },
+    {
+      "name": "ascend-profiling-analysis",
+      "path": ".agents/skills/ascend-profiling-analysis",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 48,
+      "package_sha256": "e288cd29324fed4547163c655b41b0a061d02d924f6d716af4c19bf27c27ad10"
+    },
+    {
+      "name": "ascend-profiling-collection",
+      "path": ".agents/skills/ascend-profiling-collection",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 8,
+      "package_sha256": "91f43d6fa6e22e6574370585ca651f539dcb2a0e10d6026f7701b192081ae1a9"
+    },
+    {
+      "name": "machine-management",
+      "path": ".agents/skills/machine-management",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 11,
+      "package_sha256": "d7d8041b35de09929e53e3338dd963b8c4b95676abf3c4ad77ed55ea47c7a5b2"
+    },
+    {
+      "name": "modelscope",
+      "path": ".agents/skills/modelscope",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 6,
+      "package_sha256": "5ab73f7a9b6d9e19bbeafda77b2f8039e297b886395561fee6bd19bc54ccbf0c"
+    },
+    {
+      "name": "remote-code-parity",
+      "path": ".agents/skills/remote-code-parity",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 9,
+      "package_sha256": "b60856833ccc3b2056ec1b9486ed4928b9187718597d22c7b8fa7c0307d2d93c"
+    },
+    {
+      "name": "remote-toolbox",
+      "path": ".agents/skills/remote-toolbox",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 5,
+      "package_sha256": "c6a4ac0e39667f6b6f836ea05aa9eb37960f64867708e1a472a281dad468c966"
+    },
+    {
+      "name": "repo-init",
+      "path": ".agents/skills/repo-init",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 11,
+      "package_sha256": "33bef16cbd3d9479b723864937af4cd40e9013727051333bea1f26b837b69628"
+    },
+    {
+      "name": "session-management",
+      "path": ".agents/skills/session-management",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 9,
+      "package_sha256": "4650b354b7dc67bf39bd9de7abc5c987fb2b230dc00daffa1aa867fcd4407c06"
+    },
+    {
+      "name": "vllm-ascend-benchmark",
+      "path": ".agents/skills/vllm-ascend-benchmark",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 6,
+      "package_sha256": "8356bcee0371fdb24164ee383b1233b71eedd57ff66a8c02c38cc5ff55603509"
+    },
+    {
+      "name": "vllm-ascend-build",
+      "path": ".agents/skills/vllm-ascend-build",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 2,
+      "package_sha256": "3b98460d2519b09a95bfbd5b32c1225c66f2065aa9dbc9ededf3a4f63313b4fa"
+    },
+    {
+      "name": "vllm-ascend-serving",
+      "path": ".agents/skills/vllm-ascend-serving",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 10,
+      "package_sha256": "f48efaeda61002966156397529d116a8d1ac5e1c7359098eb304aa7c55046273"
+    },
+    {
+      "name": "aisbench-pd-benchmark",
+      "path": ".agents/skills/aisbench-pd-benchmark",
+      "source_group": "global-skills",
+      "license": "unspecified",
+      "file_count": 5,
+      "package_sha256": "d41361b9d0d052de0a3fac975ce8e01184f2a4c642e0a2c70c8cf06be8c4935d"
+    },
+    {
+      "name": "compile-mooncake",
+      "path": ".agents/skills/compile-mooncake",
+      "source_group": "global-skills",
+      "license": "unspecified",
+      "file_count": 3,
+      "package_sha256": "c709ffa6a390382b4ac589c89bdc9751d69cbb89bd40a91f76f9518a8a1e12e2"
+    },
+    {
+      "name": "hccl-auto-test",
+      "path": ".agents/skills/hccl-auto-test",
+      "source_group": "global-skills",
+      "license": "unspecified",
+      "file_count": 1,
+      "package_sha256": "3e98469ddd6949ff102f0e59d11322c55dd7036e009250928b0adcfed61b8742"
+    },
+    {
+      "name": "hixl-troubleshoot",
+      "path": ".agents/skills/hixl-troubleshoot",
+      "source_group": "global-skills",
+      "license": "CANN-2.0",
+      "file_count": 11,
+      "package_sha256": "36a21d4242bed51cf47140a089b66355615ad54e8a02b15449812010986dfb4f"
+    },
+    {
+      "name": "pd-dfx-workbench",
+      "path": ".agents/skills/pd-dfx-workbench",
+      "source_group": "global-skills",
+      "license": "unspecified",
+      "file_count": 4,
+      "package_sha256": "8744c69c808d9fbc7eff3407fc5161fe5590b20ce17fa81189014b5e8ec3d124"
+    },
+    {
+      "name": "vllm-ascend-model-adapter",
+      "path": ".agents/skills/vllm-ascend-model-adapter",
+      "source_group": "vllm-ascend",
+      "license": "Apache-2.0",
+      "file_count": 6,
+      "package_sha256": "bf358a4fc723165eaad1a47bcdfdda90ac5a2e321473b4cafb8f8de2ae00ac3b"
+    },
+    {
+      "name": "vllm-ascend-release",
+      "path": ".agents/skills/vllm-ascend-release",
+      "source_group": "vllm-ascend",
+      "license": "Apache-2.0",
+      "file_count": 13,
+      "package_sha256": "6ef20c296dbe79b652478b1580f16e715dc1ff8665c1cc206713f821aef12456"
+    },
+    {
+      "name": "vllm-ascend-debug",
+      "path": ".agents/skills/vllm-ascend-debug",
+      "source_group": "pd-debug-prototype",
+      "license": "unspecified",
+      "file_count": 9,
+      "package_sha256": "5738f27be659870c5721f8163f94b98c50eebbd7b2cdfbcf91e8bc279b0295be"
+    },
+    {
+      "name": "debugging-vllm-ascend-pd-accuracy",
+      "path": ".agents/skills/debugging-vllm-ascend-pd-accuracy",
+      "source_group": "local-pd-accuracy",
+      "license": "unspecified",
+      "file_count": 11,
+      "package_sha256": "9d0f7c5550b8c8ef6f8fa2dfec00f2e44ecd668f9aed80697d5a00e686eb120f"
+    },
+    {
+      "name": "main2main",
+      "path": ".agents/skills/main2main",
+      "source_group": "vllm-ascend-main2main",
+      "license": "Apache-2.0",
+      "file_count": 5,
+      "package_sha256": "eac825daaf9344d7d28c2e3f344c01f853be1b11bc597fc89fa2c39951db4be3"
+    },
+    {
+      "name": "vllm-ascend-release-note-writer",
+      "path": ".agents/skills/vllm-ascend-release-note-writer",
+      "source_group": "vllm-ascend-legacy-release",
+      "license": "Apache-2.0",
+      "file_count": 3,
+      "package_sha256": "a95889a6163a900d4798e14fa85ad3d7cbb02cf0f0e762cc2d941ee52ae15a69"
+    },
+    {
+      "name": "driver-peermem-check",
+      "path": ".agents/skills/driver-peermem-check",
+      "source_group": "hixl",
+      "license": "CANN-2.0",
+      "file_count": 2,
+      "package_sha256": "f8096a0cdf129670e170f6734a6f278c4501861fabca336744883df2849344f8"
+    },
+    {
+      "name": "hixl-ut-generator",
+      "path": ".agents/skills/hixl-ut-generator",
+      "source_group": "hixl",
+      "license": "CANN-2.0",
+      "file_count": 1,
+      "package_sha256": "c81d0f37d1579177b883f66e0bccc2772187b98d873fb5c3c0c5283b29af7653"
+    },
+    {
+      "name": "hixl-srs-doc-generator",
+      "path": ".agents/skills/hixl-srs-doc-generator",
+      "source_group": "hixl",
+      "license": "CANN-2.0",
+      "file_count": 3,
+      "package_sha256": "73429904360f555d2c426c9e532e3f35770a570cc76fb386cb70960a0d165ad2"
+    },
+    {
+      "name": "hixl-pr-review",
+      "path": ".agents/skills/hixl-pr-review",
+      "source_group": "hixl",
+      "license": "CANN-2.0",
+      "file_count": 6,
+      "package_sha256": "b76d53baee178d22a65b767f6e615b4031ca3534a5f7ca8eb3eaf664183f9c84"
+    }
+  ],
+  "export_adjustments": [
+    ".agents/skills/ascend-profiling-analysis/SKILL.md",
+    ".agents/skills/ascend-profiling-analysis/references/command-recipes.md",
+    ".agents/skills/ascend-profiling-analysis/scripts/ascend_profile/knowledge/known_counterexamples.md",
+    ".agents/skills/compile-mooncake/reference.md",
+    ".agents/skills/hccl-auto-test/SKILL.md",
+    ".agents/skills/machine-management/references/command-recipes.md",
+    ".agents/skills/machine-management/scripts/manage_machine.py",
+    ".agents/skills/main2main/SKILL.md",
+    ".agents/skills/main2main/proactive-upgrade.md",
+    ".agents/skills/main2main/references/versioning-policy.md",
+    ".agents/skills/pd-dfx-workbench/SKILL.md",
+    ".agents/skills/pd-dfx-workbench/references/workbook-schema.md",
+    ".agents/skills/remote-code-parity/SKILL.md",
+    ".agents/skills/remote-toolbox/references/command-recipes.md",
+    ".agents/skills/remote-toolbox/references/stress-validation.md",
+    ".agents/skills/vllm-ascend-benchmark/SKILL.md",
+    ".agents/skills/vllm-ascend-benchmark/references/command-recipes.md",
+    ".agents/skills/vllm-ascend-benchmark/scripts/bench_run.py",
+    ".agents/skills/vllm-ascend-release-note-writer/SKILL.md",
+    ".remote-dev/README.md"
+  ],
+  "source_revisions": {
+    "workspace": "c7f899d74a36d0d031f488a3d81bad49de2be724",
+    "vllm-ascend": "a2acc452fb4d6bd181dd0bfe3b4bb5aff075292a",
+    "note": "Copied working-tree contents; revision identifiers record the source base, not a claim of a clean checkout."
+  },
+  "export_notes": [
+    "Text files use UTF-8 and LF line endings.",
+    "Three skill frontmatter compatibility issues corrected; legacy release paths corrected; main2main versioning policy bundled.",
+    "Package hashes cover relative file paths and file bytes; Python caches are excluded."
+  ]
+}

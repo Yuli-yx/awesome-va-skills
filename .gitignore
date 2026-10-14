@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.vaws-local/
+.remote-dev/state/
+.remote-dev/endpoints.json
+.remote-dev/endpoints.local.json
+.machine-inventory.json
+.env
+.env.*
+!.env.example
+artifacts/
+experiments/
+*.log
+*.rar
+*.zip

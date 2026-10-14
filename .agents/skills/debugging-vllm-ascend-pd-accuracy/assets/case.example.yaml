@@ -1,0 +1,22 @@
+name: pd-accuracy-example
+request:
+  method: POST
+  path: /v1/completions
+  headers:
+    Content-Type: application/json
+  json:
+    model: kimi-k3
+    prompt: "固定测试 prompt"
+    temperature: 0
+    max_tokens: 100
+  repeats: 3
+endpoints:
+  - name: proxy
+    url: http://192.0.2.30:1999
+  - name: decode-0
+    url: http://192.0.2.10:1999
+experiments:
+  readiness_timeout_seconds: 900
+  per_experiment_timeout_seconds: 1800
+  allow_container_restart: true
+  enable_kv_fingerprint: auto

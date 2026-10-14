@@ -1,0 +1,20 @@
+container: pd_kimi_zyx
+ssh:
+  connect_timeout: 10
+  command_timeout: 60
+  known_hosts_policy: auto_add
+hosts:
+  - name: decode-0
+    host: 192.0.2.10
+    user: root
+    password_env: PD_SSH_PASSWORD_DECODE
+    role: decode
+    endpoint: http://192.0.2.10:1999
+  - name: prefill-0
+    host: 192.0.2.20
+    user: root
+    password_env: PD_SSH_PASSWORD_PREFILL
+    role: prefill
+    endpoint: http://192.0.2.20:1999
+proxy:
+  url: http://192.0.2.30:1999

@@ -1,0 +1,6 @@
+interface:
+  display_name: "纯P／纯D性能验收"
+  short_description: "纯P、纯D及端到端稳态性能验收，覆盖TTFT、TPOT和MTP校准"
+  default_prompt: "使用 $pd-pure-role-benchmark 整理纯P、纯D及端到端性能验收方案，并按已授权范围执行。"
+policy:
+  allow_implicit_invocation: true

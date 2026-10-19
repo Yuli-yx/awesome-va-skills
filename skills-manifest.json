@@ -225,6 +225,22 @@
       "license": "CANN-2.0",
       "file_count": 6,
       "package_sha256": "b76d53baee178d22a65b767f6e615b4031ca3534a5f7ca8eb3eaf664183f9c84"
+    },
+    {
+      "name": "pd-pure-role-benchmark",
+      "path": ".agents/skills/pd-pure-role-benchmark",
+      "source_group": "workspace",
+      "license": "MIT",
+      "file_count": 3,
+      "package_sha256": "c1f93b100f1a38ad4130a0c8d76d0278554f5f64994bbb2d205d3c849058d940",
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)",
+      "file_sha256": {
+        "agents/openai.yaml": "d2c4e7a7d36270d8baeecb7a47af4fb5c68bdc4fb2b315dbacf90e4085390c1f",
+        "references/protocol.md": "edff5e5d7ab41ba2562eaef609310032c0c37362e4316a55b1ffd4f83061ba93",
+        "SKILL.md": "78f316b264f6b3ab15f526c433fee5732a9c2c599f38f1b04ab0b9f3d1bb6551"
+      },
+      "imported_on": "2026-10-19",
+      "source_note": "Imported pending workspace package; source workspace base c7f899d74a36d0d031f488a3d81bad49de2be724. Does not authorize benchmark execution."
     }
   ],
   "export_adjustments": [
@@ -258,5 +274,6 @@
     "Text files use UTF-8 and LF line endings.",
     "Three skill frontmatter compatibility issues corrected; legacy release paths corrected; main2main versioning policy bundled.",
     "Package hashes cover relative file paths and file bytes; Python caches are excluded."
-  ]
+  ],
+  "updated_on": "2026-10-19"
 }

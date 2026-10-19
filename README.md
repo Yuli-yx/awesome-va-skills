@@ -2,7 +2,7 @@
 
 面向 **vLLM-Ascend / Huawei Ascend NPU** 的 Agent Skills 合集。覆盖开发、部署、远端管理、性能与精度评测、profiling、P/D 调测、Mooncake/HIXL/HCCL 通信和版本维护。
 
-本仓库收集了 **28 个 skill 包**，保留 `SKILL.md`、脚本、参考资料、模板和 Agent 元数据。收集日期：2026-10-14。
+本仓库收集了 **29 个 skill 包**，保留 `SKILL.md`、脚本、参考资料、模板和 Agent 元数据。首次收集日期：2026-10-14；2026-10-19 补入纯 P／纯 D 容量验收包。
 
 ## 技能目录
 
@@ -21,6 +21,7 @@
 | 评测 | [vllm-ascend-benchmark](.agents/skills/vllm-ascend-benchmark/SKILL.md) | 在线服务性能测试 |
 | 评测 | [aisbench-pd-benchmark](.agents/skills/aisbench-pd-benchmark/SKILL.md) | AISBench 与两端 P/D 性能测试 |
 | 评测 | [aisbench-accuracy](.agents/skills/aisbench-accuracy/SKILL.md) | 数据集精度与回归对照 |
+| 评测 | [pd-pure-role-benchmark](.agents/skills/pd-pure-role-benchmark/SKILL.md) | 纯 P／纯 D 容量、稳态 QPS 与 MTP 对照验收 |
 | Profiling | [ascend-profiling-collection](.agents/skills/ascend-profiling-collection/SKILL.md) | 采集 Ascend torch profiler 数据 |
 | Profiling | [ascend-profiling-analysis](.agents/skills/ascend-profiling-analysis/SKILL.md) | 算子、step、layer 和跨 rank 分析及报告 |
 | Profiling | [ascend-memory-profiling](.agents/skills/ascend-memory-profiling/SKILL.md) | HBM 占用采集与归因 |
@@ -38,6 +39,8 @@
 | 发布 | [vllm-ascend-release-note-writer](.agents/skills/vllm-ascend-release-note-writer/SKILL.md) | 历史版本发布说明写作流程 |
 
 ## 使用方式
+
+上游 `vllm-ascend-workspace` 已迁移为 `mindie-agent/mindie-agent`。本合集继续独立保存我们的业务 Skills 和旧布局共享工具；不把它们重新塞入上游产品主仓。纯资料型包可按需加载；旧脚本包仍依赖本节描述的旧布局，尚未声明适配新 `coordinator`／`remote-dev` 组件接口。
 
 每次先阅读目标包的 `SKILL.md`，按需加载其参考资料。任务涉及实际模型推理、构建或 NPU 测试时，需要远端 Ascend 容器和兼容的 CANN、torch、torch_npu 环境。收集与静态验证不代表 NPU 运行验证。
 

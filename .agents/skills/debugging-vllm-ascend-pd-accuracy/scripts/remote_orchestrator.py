@@ -147,7 +147,40 @@ def inspect_command(container: str) -> str:
 
 
 PROBE = r"""
-import glob, hashlib, importlib.metadata, json, os, subprocess
+import glob, hashlib, importlib.metadata, json, os, re, subprocess
+
+SECRET_KEY = re.compile(
+    r"api[-_]?key|password|passwd|secret|credential|authorization|"
+    r"(?:access|auth|bearer|hf)[-_]?token|^token$", re.I
+)
+
+def redact(value):
+    if isinstance(value, dict):
+        return {key: "<redacted>" if SECRET_KEY.search(str(key)) else redact(child)
+                for key, child in value.items()}
+    if isinstance(value, list):
+        return [redact(child) for child in value]
+    return value
+
+def redact_argv(args):
+    result, hide_next = [], False
+    for arg in args:
+        if hide_next:
+            result.append("<redacted>")
+            hide_next = False
+        elif arg.startswith("--") and SECRET_KEY.search(arg[2:].split("=", 1)[0]):
+            if "=" in arg:
+                result.append(arg.split("=", 1)[0] + "=<redacted>")
+            else:
+                result.append(arg)
+                hide_next = True
+        else:
+            try:
+                parsed = json.loads(arg)
+                result.append(json.dumps(redact(parsed)) if isinstance(parsed, (dict, list)) else arg)
+            except (ValueError, TypeError):
+                result.append(arg)
+    return result
 
 SAFE_PREFIXES = (
     "HCCL_", "GLOO_", "TP_SOCKET_", "ASCEND_", "VLLM_", "MOONCAKE_",
@@ -240,7 +273,7 @@ result = {
         )
     },
     "vllm_ascend_module": module_info("vllm_ascend"),
-    "vllm_pid": pid, "vllm_argv": argv, "serve": serve,
+    "vllm_pid": pid, "vllm_argv": redact_argv(argv), "serve": redact(serve),
 }
 if pid:
     try: result["vllm_cwd"] = os.path.realpath(f"/proc/{pid}/cwd")
@@ -250,7 +283,7 @@ if pid:
         for entry in open(f"/proc/{pid}/environ", "rb").read().split(b"\0"):
             if b"=" not in entry: continue
             key, value = entry.decode("utf-8", "replace").split("=", 1)
-            if key.startswith(SAFE_PREFIXES): env[key] = value
+            if key.startswith(SAFE_PREFIXES) and not SECRET_KEY.search(key): env[key] = value
         result["selected_env"] = env
     except Exception: pass
 model = serve.get("model")

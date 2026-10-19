@@ -32,7 +32,8 @@ rate = Decimal(sys.argv[1])
 if rate < 0 or not rate.is_finite():
     raise ValueError("REQUEST_RATE must be a finite nonnegative number")
 warmup_rate = rate * Decimal("1.5") if rate else rate
-print(format(warmup_rate, "f").rstrip("0").rstrip(".") if warmup_rate else "0")
+formatted = format(warmup_rate, "f")
+print(formatted.rstrip("0").rstrip(".") if "." in formatted else formatted)
 PY
 )"
   fi

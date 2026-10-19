@@ -1,8 +1,8 @@
-container: pd_kimi_zyx
+container: pd-debug-example
 ssh:
   connect_timeout: 10
   command_timeout: 60
-  known_hosts_policy: auto_add
+  known_hosts_policy: reject
 hosts:
   - name: decode-0
     host: 192.0.2.10

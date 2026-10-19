@@ -5,11 +5,11 @@ Skill 使用两个运行时文件：inventory 描述 SSH/容器/endpoint，case 
 ## inventory.example.yaml
 
 ```yaml
-container: pd_kimi_zyx
+container: pd-debug-example
 ssh:
   connect_timeout: 10
   command_timeout: 60
-  known_hosts_policy: auto_add
+  known_hosts_policy: reject
 hosts:
   - name: decode-0
     host: 192.0.2.10
@@ -32,17 +32,18 @@ proxy:
 ## case.example.yaml
 
 ```yaml
-name: kimi-full-model-pd-repetition
+name: pd-accuracy-example
 request:
   method: POST
   path: /v1/completions
   headers:
     Content-Type: application/json
   json:
-    model: kimi-k3
+    model: served-model
     prompt: "固定测试 prompt"
     temperature: 0
     max_tokens: 100
+  auth_token_env: PD_AUTH_TOKEN
   repeats: 3
 endpoints:
   - name: proxy
@@ -52,8 +53,10 @@ endpoints:
 experiments:
   readiness_timeout_seconds: 900
   per_experiment_timeout_seconds: 1800
-  allow_container_restart: true
+  allow_container_restart: false
   enable_kv_fingerprint: auto
 ```
 
 不要在 case 中保存 `Authorization` token；运行时通过 `PD_AUTH_TOKEN` 注入，脚本只在内存中添加请求头。
+
+无认证服务可以省略 `auth_token_env`。默认拒绝未知 SSH host key，先通过可信渠道核对并配置 known_hosts；`auto_add` 仅用于用户明确选择的兼容场景。`allow_container_restart` 是实验计划声明，脚本的独立重启命令仍要求当次授权和 `--yes-restart-exact-container`，不会自动读取 case 替用户批准。

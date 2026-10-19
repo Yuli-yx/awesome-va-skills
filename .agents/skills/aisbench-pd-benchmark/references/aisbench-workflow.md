@@ -36,12 +36,13 @@ export CCW_HOST_IP=<proxy-host>
 export http_proxy="http://${CCW_HOST_IP}:3128"
 export https_proxy="${http_proxy}"
 export ftp_proxy="${http_proxy}"
-export GIT_SSL_NO_VERIFY=true
 git clone https://github.com/rayn-zzz/aisbench_auto_tools_prefix.git
 ```
 
 Unset those variables after installation if normal service traffic should not
 use the proxy. Prefer the already installed checkout and package when present.
+Keep TLS certificate verification enabled; use the environment's trusted CA
+configuration if an enterprise proxy supplies the certificate chain.
 Find AISBench's Python work path with:
 
 ```bash

@@ -75,6 +75,8 @@ git clone https://github.com/Yuli-yx/awesome-va-skills.git
 
 ## 许可证
 
+逐包原始来源、作者和本地改动见 [ATTRIBUTION.md](ATTRIBUTION.md)。AISBench PD skill 来自 [wangxiaoteng888](https://github.com/wangxiaoteng888/vllm-ascend-workspace/tree/5fba343c1c2b3d896f1273e0ecb9b0581f8128d4/.agents/skills/aisbench-pd-benchmark)，沿用 MIT；自有的 P/D 精度诊断与纯 P／纯 D 验收包已附 MIT 许可证。A5 HCCL 打流保留 WZN-JJB 的 GitCode 来源与署名，其个人分支许可仍待原作者明确。
+
 这是多来源合集，各包保留原有版权和许可证。`LICENSES/` 包含来源工作区的 MIT、vLLM-Ascend 的 Apache-2.0 和 HIXL 的 CANN 2.0 文本。未明确声明许可证的本地包在清单中标为 `unspecified`，本合集不为这些文件追加或推定授权。
 
 ## 本次验证范围

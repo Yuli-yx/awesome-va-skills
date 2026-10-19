@@ -1,9 +1,12 @@
 ---
 name: debugging-vllm-ascend-pd-accuracy
+license: MIT
 description: Use when vLLM Ascend 的 Prefill/Decode 分离出现复读、乱码、截断、首 token 偏差、PD 与非 PD 输出不一致，或全量模型异常而减层模型正常；适用于 KV transfer、Mooncake、外部 DP、多机 TP/DP、ACL Graph、Decode logits 和 NPU 精度问题的全自动远程诊断。
 ---
 
 # vLLM Ascend PD 精度调试
+
+本包由 Yuli-yx 维护，为用户确认的自有工作流，采用 MIT；分发时保留完整包与[许可证](LICENSE)。
 
 这是一个**证据优先、单变量、可恢复**的远程诊断 Skill。它只在用户明确授权“开始执行”后操作远程环境；默认从项目 `.venv` 运行 Python，所有远程写操作限制在指定容器内。
 
@@ -29,6 +32,8 @@ description: Use when vLLM Ascend 的 Prefill/Decode 分离出现复读、乱码
 
 详细步骤见 `references/sop.md`；inventory/case 格式见 `references/config-schema.md`；KV 指纹策略见 `references/instrumentation.md`。远程并发探针和容器安全操作使用 `scripts/remote_orchestrator.py`，确定性 HTTP 复现使用 `scripts/run_requests.py`，输出比较使用 `scripts/analyze_responses.py`。
 
-## 当前案例的安全提醒
+## 运行时输入
 
-当前 8 机、`pd_kimi_zyx`、Kimi 请求和密码只能作为运行时输入，不能固化到本 Skill。服务未完全拉起时必须停在“就绪检查”，不发送推理请求。
+机器、精确容器名、模型、请求和授权范围由本次 inventory/case 提供，不从历史案例推断。服务未完全拉起时停在“就绪检查”，不发送推理请求。
+
+优先使用已配置的 MindIE remote-dev companion 工具。包内 inventory 脚本是独立部署的兼容入口，不要求将项目改回旧脚手架。连接与重启须在用户已授权的目标和范围内执行。

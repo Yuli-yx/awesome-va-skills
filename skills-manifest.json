@@ -110,9 +110,27 @@
       "name": "aisbench-pd-benchmark",
       "path": ".agents/skills/aisbench-pd-benchmark",
       "source_group": "global-skills",
-      "license": "unspecified",
-      "file_count": 5,
-      "package_sha256": "d41361b9d0d052de0a3fac975ce8e01184f2a4c642e0a2c70c8cf06be8c4935d"
+      "license": "MIT",
+      "file_count": 7,
+      "package_sha256": "e14c0ce1b8cc2a391b32bf2661fdb09c66b4f7904ec16b36ad58ba646f749341",
+      "source_origin": {
+        "repository": "https://github.com/wangxiaoteng888/vllm-ascend-workspace",
+        "revision": "5fba343c1c2b3d896f1273e0ecb9b0581f8128d4",
+        "path": ".agents/skills/aisbench-pd-benchmark",
+        "author": "wangxiaoteng888 (Git author: wangxiaoteng)",
+        "license_path": "LICENSE",
+        "adapted_by": "Yuli-yx"
+      },
+      "file_sha256": {
+        "agents/openai.yaml": "6651dffee13ea8159195c736c74b6385c97a0eb833685fdd8c74819932f86f83",
+        "LICENSE": "35cbc28647a8d75cc03e4d8fe63b78a7a6a1e883b5dbf8df8856e8ca12ba1521",
+        "references/aisbench-workflow.md": "b8d1df3deace6ae5937617b069c7a29d89e584f459f2a1aa70d461415141d5e3",
+        "scripts/prepare_run.py": "f04ef74c9f12eba0a371f0e0ced0639fe572551a3b2bf449a3bca0ef5bd2963c",
+        "scripts/run_case.sh": "c7052d7c39d38f4e2e5834a699827f04c9645ce252305cd82c45a7d5b489dd32",
+        "SKILL.md": "cf558cd50f3a05089b1dff3482c7a50807e299aa9dd3ec5edb26d290c8ae6cb3",
+        "tests/test_prepare_and_warmup.py": "67369106ef9927629394997916d85e2bfb31668474f54806dd695a844fdb0f19"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "compile-mooncake",
@@ -128,7 +146,14 @@
       "source_group": "global-skills",
       "license": "unspecified",
       "file_count": 1,
-      "package_sha256": "3e98469ddd6949ff102f0e59d11322c55dd7036e009250928b0adcfed61b8742"
+      "package_sha256": "3e98469ddd6949ff102f0e59d11322c55dd7036e009250928b0adcfed61b8742",
+      "source_origin": {
+        "repository": "https://gitcode.com/qq_46749096/MindIE-PyMotor",
+        "revision": "9f0f99c319090eec50a182eec390a1307254e2ae",
+        "path": "personal_skills/hccl-auto-test",
+        "author": "WZN-JJB",
+        "license_status": "Personal branch has no explicit license; applicability of master Mulan PSL v2 awaits author confirmation."
+      }
     },
     {
       "name": "hixl-troubleshoot",
@@ -173,10 +198,31 @@
     {
       "name": "debugging-vllm-ascend-pd-accuracy",
       "path": ".agents/skills/debugging-vllm-ascend-pd-accuracy",
-      "source_group": "local-pd-accuracy",
-      "license": "unspecified",
-      "file_count": 11,
-      "package_sha256": "9d0f7c5550b8c8ef6f8fa2dfec00f2e44ecd668f9aed80697d5a00e686eb120f"
+      "source_group": "user-authored-pd-accuracy",
+      "license": "MIT",
+      "file_count": 13,
+      "package_sha256": "861d723303c7f50c0ca4af430d1d37886d99ae5621e9a0e899974da8731d56ca",
+      "source_origin": {
+        "repository": "https://github.com/Yuli-yx/awesome-va-skills",
+        "maintainer": "Yuli-yx",
+        "note": "User confirmed own workflow and explicitly selected MIT on 2026-10-19."
+      },
+      "file_sha256": {
+        "agents/openai.yaml": "48933fc28a6c9e9f128b12a09caafcd40eec5fb126802ac096772d688655aa91",
+        "assets/case.example.yaml": "87a90ef708f73329186bb1722922c1d8c23645531becce427f39b6c71442b91a",
+        "assets/inventory.example.yaml": "fbfbcff27c189b7e87b1c56d043346623cacc37b0740c557ef1b6466c5d5ac8d",
+        "LICENSE": "9bb37c92bc28b7d9c151e4d7948f249b3fcca5a56c893627c00ba9e01ae332e3",
+        "references/config-schema.md": "8952163b2509d182be7f9425e9dd41c90d096e5816c37d82ed3421d7491b823f",
+        "references/instrumentation.md": "35d982ef5ea41714d1dec4a0ffe52b3c56a0d0bfc5b3ee0a694cdffd5d69bcb6",
+        "references/sop.md": "7d78ed1138a88ff35326f575a5e361859714008b989301db624796b3f4737cd0",
+        "references/validation-scenarios.md": "5804b4370a84351def853f20b2ce0087b1b9a80ec70d1bf3a07b586c9fa30c6c",
+        "scripts/analyze_responses.py": "11a8cb3efe40af2178fd093cf5f985f5e13505e7f65512090b9527d71af34e04",
+        "scripts/remote_orchestrator.py": "89e27e25ac6b2ef196e7e48ae02b4a5f1f53309d2914293122a2c70a19c7e046",
+        "scripts/run_requests.py": "0fb124fcf24e49ebd2c54e15b91501004a43085d9658865fac8d57eee40f6890",
+        "SKILL.md": "becf2759d95780407c744edc0d6e1c69ae828adcbcd349c343583ab7f54ea90e",
+        "tests/test_probe_redaction.py": "236576daaf0e061e61b97ac8065546d977b143544ada12ac3984723459c1cc16"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "main2main",
@@ -231,13 +277,14 @@
       "path": ".agents/skills/pd-pure-role-benchmark",
       "source_group": "workspace",
       "license": "MIT",
-      "file_count": 3,
-      "package_sha256": "c1f93b100f1a38ad4130a0c8d76d0278554f5f64994bbb2d205d3c849058d940",
+      "file_count": 4,
+      "package_sha256": "e9ae404e151ddf8a1aea52d22129f7e365ee0fa9f596808225f97a758bf8ddd1",
       "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)",
       "file_sha256": {
         "agents/openai.yaml": "d2c4e7a7d36270d8baeecb7a47af4fb5c68bdc4fb2b315dbacf90e4085390c1f",
+        "LICENSE": "9bb37c92bc28b7d9c151e4d7948f249b3fcca5a56c893627c00ba9e01ae332e3",
         "references/protocol.md": "edff5e5d7ab41ba2562eaef609310032c0c37362e4316a55b1ffd4f83061ba93",
-        "SKILL.md": "78f316b264f6b3ab15f526c433fee5732a9c2c599f38f1b04ab0b9f3d1bb6551"
+        "SKILL.md": "10ce3fbfe70d095d2393159a70104501ed0e89f038f8a34419af249bbe450a6b"
       },
       "imported_on": "2026-10-19",
       "source_note": "Imported pending workspace package; source workspace base c7f899d74a36d0d031f488a3d81bad49de2be724. Does not authorize benchmark execution."

@@ -53,20 +53,44 @@ see [the preserved license](LICENSES/HIXL-CANN-2.0.txt).
 [qq_46749096/MindIE-PyMotor, personal_skills branch](https://gitcode.com/qq_46749096/MindIE-PyMotor/tree/personal_skills/personal_skills/hccl-auto-test).
 The inspected source file is
 [SKILL.md at 9f0f99c319090eec50a182eec390a1307254e2ae](https://gitcode.com/qq_46749096/MindIE-PyMotor/blob/9f0f99c319090eec50a182eec390a1307254e2ae/personal_skills/hccl-auto-test/SKILL.md).
-Its inspected Git commit is authored by **WZN-JJB**. Credit belongs to that
-source author and contributors; Yuli-yx maintains only this collected copy and
-its documented export adjustments. The inspected checkout is shallow, so this
-does not assert that the latest commit author is the only original author.
+The introducing commit `555507cf550a27e3f6421c2ede1716582bb312ac` and the
+inspected revision are authored by **WZN-JJB**. Credit belongs to that author
+and contributors; Yuli-yx maintains only this collected copy and its documented
+export adjustments.
 
-The original package has no explicit license in the inspected file/root;
-`unspecified` remains the manifest value. Attribution does not add a license.
+The personal branch has no explicit license in the inspected file/root;
+`unspecified` remains the manifest value. The repository's separate master
+revision `499b3b9ae2248cedb9784ffddd0df1c092a27cb6` contains a
+[Mulan PSL v2 license](https://gitcode.com/qq_46749096/MindIE-PyMotor/blob/499b3b9ae2248cedb9784ffddd0df1c092a27cb6/LICENSE.md),
+but its application to the standalone personal skill has not been confirmed.
+Attribution does not add a license.
 Do not submit it as an original Yuli-yx skill or register it in a catalogue
 requiring an explicit source license until that information is supplied.
 
+## AISBench PD benchmark
+
+`aisbench-pd-benchmark` originates from
+[wangxiaoteng888/vllm-ascend-workspace](https://github.com/wangxiaoteng888/vllm-ascend-workspace/tree/5fba343c1c2b3d896f1273e0ecb9b0581f8128d4/.agents/skills/aisbench-pd-benchmark),
+at revision `5fba343c1c2b3d896f1273e0ecb9b0581f8128d4`, authored in Git by
+`wangxiaoteng`. The repository's
+[MIT license](https://github.com/wangxiaoteng888/vllm-ascend-workspace/blob/5fba343c1c2b3d896f1273e0ecb9b0581f8128d4/LICENSE)
+preserves Qi Mao's copyright notice; a copy is bundled with this skill.
+Yuli-yx's adapted copy adds warmup load/timing controls and fixes warmup-rate
+formatting. The external benchmark application
+[rayn-zzz/aisbench_auto_tools_prefix](https://github.com/rayn-zzz/aisbench_auto_tools_prefix)
+is a separate dependency, not the author of this skill package.
+
+## User-authored PD accuracy workflow
+
+The user confirmed `debugging-vllm-ascend-pd-accuracy` is our own workflow and
+authorized MIT for it. Yuli-yx maintains the package; its canonical public
+source is [this collection](https://github.com/Yuli-yx/awesome-va-skills/tree/codex/selected-skills-upstream-20261019/.agents/skills/debugging-vllm-ascend-pd-accuracy).
+Its package includes an explicit MIT notice. The locally maintained
+`pd-pure-role-benchmark` likewise carries its own MIT notice.
+
 ## Installed packages with unresolved public provenance
 
-`aisbench-pd-benchmark`, `compile-mooncake`, `pd-dfx-workbench`,
-`vllm-ascend-debug`, and `debugging-vllm-ascend-pd-accuracy` were collected from
+`compile-mooncake`, `pd-dfx-workbench`, and `vllm-ascend-debug` were collected from
 local skill installations or local prototypes. Their original public package
 URLs and explicit licenses were not recorded in the export. Do not substitute
 the AISBench/Mooncake application URLs for the skill authors' source URLs, or

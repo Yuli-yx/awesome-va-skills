@@ -1,0 +1,22 @@
+id: debugging-vllm-ascend-pd-accuracy
+category: debugging
+summary:
+  zh: 定界 P/D 输出精度差异并执行对照
+  en: Use when vLLM Ascend 的 Prefill/Decode 分离出现复读、乱码、截断、首 token 偏差、PD 与非 PD 输出不一致，或全量模型异常而减层模型正常；适用于
+    KV transfer、Mooncake、外部 DP、多机 TP/DP、ACL Graph、Decode logits 和 NPU 精度问题的全自动远程诊断。.
+tags:
+- Ascend
+- vLLM Ascend
+execution: npu
+role: workflow
+source:
+  project: va-workflows
+  path: .agents/skills/debugging-vllm-ascend-pd-accuracy/SKILL.md
+  sha256: becf2759d95780407c744edc0d6e1c69ae828adcbcd349c343583ab7f54ea90e
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

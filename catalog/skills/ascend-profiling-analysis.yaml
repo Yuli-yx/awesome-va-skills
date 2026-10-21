@@ -1,0 +1,25 @@
+id: ascend-profiling-analysis
+category: profiling
+summary:
+  zh: 分析算子、step、layer 和跨 rank profiling
+  en: Analyze Ascend NPU torch profiler output (kernel_details.csv / trace_view.json
+    / op_summary / communication.json) for one or many profiling roots and produce
+    a traceable report (rank/step/layer/operator summary, cross-rank alignment, diagnosis
+    findings, report.md / report.xlsx / report.html with single-step inspectors, bubble
+    tracing axes, and zoomable Chrome-tracing-style timelines).
+tags:
+- Ascend
+- vLLM Ascend
+execution: offline
+role: workflow
+source:
+  project: va-workflows
+  path: .agents/skills/ascend-profiling-analysis/SKILL.md
+  sha256: f9becfdb254bddd97b4b8127b58e14b3eb391d256ce4e85d096cd995d5175cdc
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Awesome MindIE Skills monochrome mark</title>
+  <path d="M22 103V25L64 71L106 25V103" fill="none" stroke="#0F172A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0F172A">
+    <circle cx="22" cy="103" r="10"/><circle cx="22" cy="25" r="10"/>
+    <circle cx="64" cy="71" r="10"/><circle cx="106" cy="25" r="10"/>
+    <circle cx="106" cy="103" r="10"/>
+  </g>
+</svg>

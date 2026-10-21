@@ -1,0 +1,22 @@
+id: vllm-ascend-serving
+category: serving
+summary:
+  zh: 启动、检查与清理归属明确的推理服务
+  en: Start, check, or stop a single-node vLLM Ascend online service on a workspace-managed
+    ready remote container.
+tags:
+- Ascend
+- vLLM Ascend
+execution: npu
+role: workflow
+source:
+  project: va-workflows
+  path: .agents/skills/vllm-ascend-serving/SKILL.md
+  sha256: f18f8600d8a5d578162a2e3fa9758224cb0e4cd8b58bc75d21f5a399c47ab703
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

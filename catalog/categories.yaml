@@ -1,0 +1,72 @@
+schema_version: 1
+categories:
+- id: environment
+  title:
+    zh: 环境与依赖
+    en: Environment and dependencies
+  description:
+    zh: 检查驱动、CANN、框架配套、容器和设备环境。
+    en: Check drivers, CANN, framework compatibility, containers, and devices.
+- id: model-integration
+  title:
+    zh: 模型接入与转换
+    en: Model integration and conversion
+  description:
+    zh: 接入模型、转换权重，并核对配置与输入输出。
+    en: Integrate models, convert weights, and verify configuration and input/output contracts.
+- id: serving
+  title:
+    zh: 服务部署与扩展
+    en: Serving and scaling
+  description:
+    zh: 部署共置或 PD 分离服务，验证拓扑、端点与请求。
+    en: Deploy colocated or disaggregated services and verify topology, endpoints, and requests.
+- id: correctness
+  title:
+    zh: 正确性与精度
+    en: Correctness and accuracy
+  description:
+    zh: 固定参考与用例矩阵，比较输出、误差和任务质量。
+    en: Fix references and case matrices to compare outputs, numerical error, and task quality.
+- id: benchmarking
+  title:
+    zh: 性能评测与回归
+    en: Benchmarking and regressions
+  description:
+    zh: 通过预热、重复测量和受控对比评估吞吐与延迟。
+    en: Evaluate throughput and latency using warmup, repeated measurements, and controlled comparisons.
+- id: profiling
+  title:
+    zh: Profiling 与瓶颈分析
+    en: Profiling and bottleneck analysis
+  description:
+    zh: 采集或分析 trace、逐 rank 行为与 HBM 占用，保留证据。
+    en: Collect or analyze traces, per-rank behavior, and HBM use with traceable evidence.
+- id: optimization
+  title:
+    zh: 推理优化
+    en: Inference optimization
+  description:
+    zh: 优化执行、调度和资源重叠，并配对验证正确性与收益。
+    en: Optimize execution, scheduling, and resource overlap with paired correctness and performance validation.
+- id: operators
+  title:
+    zh: 算子开发与迁移
+    en: Operator development and migration
+  description:
+    zh: 串联算子实现、用例验证和逐 shape 性能优化。
+    en: Connect kernel implementation, case validation, and per-shape optimization.
+- id: debugging
+  title:
+    zh: 故障诊断
+    en: Debugging
+  description:
+    zh: 缩小启动、通信、图执行和算子异常的复现范围并验证修复。
+    en: Reduce startup, communication, graph, and operator failures and verify fixes.
+- id: delivery
+  title:
+    zh: 工程交付与运行维护
+    en: Delivery and operations
+  description:
+    zh: 将变更映射到构建、正确性和性能验证，记录覆盖范围。
+    en: Map changes to build, correctness, and performance checks and record coverage.

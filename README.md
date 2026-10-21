@@ -1,82 +1,154 @@
 # awesome-va-skills
 
-面向 **vLLM-Ascend / Huawei Ascend NPU** 的 Agent Skills 合集。覆盖开发、部署、远端管理、性能与精度评测、profiling、P/D 调测、Mooncake/HIXL/HCCL 通信和版本维护。
+中文 | [English](README.en.md)
 
-本仓库收集了 **29 个 skill 包**，保留 `SKILL.md`、脚本、参考资料、模板和 Agent 元数据。首次收集日期：2026-10-14；2026-10-19 补入纯 P／纯 D 容量验收包。
+面向 vLLM-Ascend / Ascend 推理工程的技能合集，目录结构与公司
+`awesome-mindie-skills` 统一：分类元数据、固定来源版本、中英目录及审阅证据。
+新的独立池化包在 `skills/ascend-memcache-pooling/`；旧技能和共享工具保持完整工作区布局。
 
-## 技能目录
-
-| 方向 | Skill | 用途 |
-| --- | --- | --- |
-| 环境 | [repo-init](.agents/skills/repo-init/SKILL.md) | 工作区初始化、GitHub 与子模块拓扑 |
-| 环境 | [machine-management](.agents/skills/machine-management/SKILL.md) | 接入、验证、修复和移除远端 NPU 主机 |
-| 环境 | [session-management](.agents/skills/session-management/SKILL.md) | 隔离工作区、容器和资源租约 |
-| 环境 | [remote-toolbox](.agents/skills/remote-toolbox/SKILL.md) | 远端任务、同步、服务和产物工具 |
-| 环境 | [remote-code-parity](.agents/skills/remote-code-parity/SKILL.md) | 本地与容器代码一致性 |
-| 模型 | [modelscope](.agents/skills/modelscope/SKILL.md) | ModelScope 权重下载、续传与校验 |
-| 开发 | [vllm-ascend-build](.agents/skills/vllm-ascend-build/SKILL.md) | 固定版本构建、原生依赖与运行路径校验 |
-| 开发 | [vllm-ascend-model-adapter](.agents/skills/vllm-ascend-model-adapter/SKILL.md) | 模型适配与调试 |
-| 开发 | [main2main](.agents/skills/main2main/SKILL.md) | 适配 vLLM 主线变化和定位兼容性 CI 失败 |
-| 服务 | [vllm-ascend-serving](.agents/skills/vllm-ascend-serving/SKILL.md) | 启停、检查服务与进程归属标识 |
-| 评测 | [vllm-ascend-benchmark](.agents/skills/vllm-ascend-benchmark/SKILL.md) | 在线服务性能测试 |
-| 评测 | [aisbench-pd-benchmark](.agents/skills/aisbench-pd-benchmark/SKILL.md) | AISBench 与两端 P/D 性能测试 |
-| 评测 | [aisbench-accuracy](.agents/skills/aisbench-accuracy/SKILL.md) | 数据集精度与回归对照 |
-| 评测 | [pd-pure-role-benchmark](.agents/skills/pd-pure-role-benchmark/SKILL.md) | 纯 P／纯 D 容量、稳态 QPS 与 MTP 对照验收 |
-| Profiling | [ascend-profiling-collection](.agents/skills/ascend-profiling-collection/SKILL.md) | 采集 Ascend torch profiler 数据 |
-| Profiling | [ascend-profiling-analysis](.agents/skills/ascend-profiling-analysis/SKILL.md) | 算子、step、layer 和跨 rank 分析及报告 |
-| Profiling | [ascend-memory-profiling](.agents/skills/ascend-memory-profiling/SKILL.md) | HBM 占用采集与归因 |
-| 调测 | [vllm-ascend-debug](.agents/skills/vllm-ascend-debug/SKILL.md) | P/D 功能、精度、性能与资源生命周期定界 |
-| 调测 | [debugging-vllm-ascend-pd-accuracy](.agents/skills/debugging-vllm-ascend-pd-accuracy/SKILL.md) | P/D 精度异常的远端诊断与对照实验 |
-| DFX | [pd-dfx-workbench](.agents/skills/pd-dfx-workbench/SKILL.md) | P/D DFX 台账、诊断缺口与覆盖映射 |
-| 通信 | [compile-mooncake](.agents/skills/compile-mooncake/SKILL.md) | Ascend Direct Mooncake 构建与安装 |
-| 通信 | [hccl-auto-test](.agents/skills/hccl-auto-test/SKILL.md) | HCCL 单机、多机打流与环境验收 |
-| 通信 | [hixl-troubleshoot](.agents/skills/hixl-troubleshoot/SKILL.md) | HIXL/ADXL 建链和传输问题诊断 |
-| 通信 | [driver-peermem-check](.agents/skills/driver-peermem-check/SKILL.md) | 驱动包与 npu_peermem RDMA 支持检查 |
-| HIXL 开发 | [hixl-ut-generator](.agents/skills/hixl-ut-generator/SKILL.md) | HIXL 单元测试生成 |
-| HIXL 开发 | [hixl-pr-review](.agents/skills/hixl-pr-review/SKILL.md) | HIXL PR 代码检视 |
-| HIXL 开发 | [hixl-srs-doc-generator](.agents/skills/hixl-srs-doc-generator/SKILL.md) | HIXL 需求规格文档 |
-| 发布 | [vllm-ascend-release](.agents/skills/vllm-ascend-release/SKILL.md) | 发布检查、版本引用、发布说明和公告 |
-| 发布 | [vllm-ascend-release-note-writer](.agents/skills/vllm-ascend-release-note-writer/SKILL.md) | 历史版本发布说明写作流程 |
-
-## 使用方式
-
-上游 `vllm-ascend-workspace` 已迁移为 `mindie-agent/mindie-agent`。本合集继续独立保存我们的业务 Skills 和旧布局共享工具；不把它们重新塞入上游产品主仓。纯资料型包可按需加载；旧脚本包仍依赖本节描述的旧布局，尚未声明适配新 `coordinator`／`remote-dev` 组件接口。
-
-每次先阅读目标包的 `SKILL.md`，按需加载其参考资料。任务涉及实际模型推理、构建或 NPU 测试时，需要远端 Ascend 容器和兼容的 CANN、torch、torch_npu 环境。收集与静态验证不代表 NPU 运行验证。
-
-### 集成到开发工作区
+归档共 30 个完整包；目录只收录许可已明确的包，4 个历史导入暂留归档待核实。
+原工作区未提交的 Leaf-Spine 和 vendor 草稿保持原样，不进入本次公共贡献。
+安装、目录对应与兼容边界见 [布局说明](docs/collection-layout.md)。
 
 ```bash
 git clone https://github.com/Yuli-yx/awesome-va-skills.git
+cd awesome-va-skills
+python -m pip install -r requirements.txt
+python scripts/validate_catalog.py
+python scripts/render_catalog.py --check
 ```
 
-将需要的 skill 包放入目标工作区 `.agents/skills/`。部署、远端管理等包使用工作区相对路径，并依赖 `.agents/lib/`、`.agents/scripts/` 和 `.remote-dev/`：这些目录应作为完整布局集成。集成到已有工作区时先检查差异，避免覆盖已有工具。目标工作区仍需准备 `vllm/` 和 `vllm-ascend/` 源码，本合集不携带源码子模块、容器或模型。
+定义审阅和离线工具测试不代表 NPU 部署、SSD 回读或性能验收通过。
+来源及版权见 [ATTRIBUTION](ATTRIBUTION.md) 和 [完整包清单](skills-manifest.json)。
 
-独立资料型 skills 可单独复制到 Agent 的用户技能目录。带共享脚本依赖的 skills 应保持上述工作区布局，不宜仅复制 `SKILL.md` 或孤立安装到用户技能目录。
+<!-- CATALOG:START -->
 
-根据运行的脚本安装本地工具依赖，例如 Python 3.10+、PyYAML、SSH、Git、GitHub CLI；profiling 分析和精度诊断的部分脚本还需 pandas、numpy、openpyxl、requests 或 paramiko。具体以各包的入口和依赖说明为准。
+26 个技能 · 8 个分类
 
-### 远端连接与本地状态
+定义已审阅：26 · 已有运行复现记录：0。具体范围见各条目记录。
 
-优先通过 `.remote-dev/tools/` 的结构化入口使用显式 `host`、`port`、`user` 参数。可将 `.remote-dev/endpoints.example.json` 复制为本地 `.remote-dev/endpoints.json` 后填入个人端点；该文件已忽略。不要提交密码、token、机器清单或进程所有者配置。
+| 来源项目 | 已收录 | 维护者 | 许可证 |
+|---|---|---|---|
+| [va-workflows](https://github.com/Yuli-yx/awesome-va-skills) | 16 | Yuli-yx collection; original authors credited in ATTRIBUTION.md | MIT |
+| [va-hixl-workflows](https://github.com/Yuli-yx/awesome-va-skills) | 5 | Yuli-yx collection; original authors credited in ATTRIBUTION.md | CANN-2.0 |
+| [va-apache-workflows](https://github.com/Yuli-yx/awesome-va-skills) | 4 | Yuli-yx collection; original authors credited in ATTRIBUTION.md | Apache-2.0 |
+| [va-pooling-workflows](https://github.com/Yuli-yx/awesome-va-skills) | 1 | Yuli-yx collection; original authors credited in ATTRIBUTION.md | CC0-1.0 AND MIT |
 
-本地状态写入 `.vaws-local/`、`.remote-dev/state/`；实验和运行产物放入 `experiments/` 或 `artifacts/`。以上路径均已忽略。
+- [环境与依赖](#environment)
+- [模型接入与转换](#model-integration)
+- [服务部署与扩展](#serving)
+- [正确性与精度](#correctness)
+- [性能评测与回归](#benchmarking)
+- [Profiling 与瓶颈分析](#profiling)
+- [故障诊断](#debugging)
+- [工程交付与运行维护](#delivery)
 
-身份标识见 [process-ownership.md](.agents/skills/vllm-ascend-serving/references/process-ownership.md)：设置 `VLLM_PROCESS_NAME_PREFIX=<owner-id>`，在宿主机核实进程名称和归属。DFX skill 需要用户提供自己的工作簿；本仓库不含台账数据。
+<a id="environment"></a>
 
-## 收集规则与来源
+### 环境与依赖
 
-- 同名 skill 按包去重，工作区维护的规范包优先；工具适配器和旧 worktree 副本不重复收录。
-- HIXL 开发包作为 Ascend 通信配套能力收录；普通办公、前端、通用 Agent 和 CUDA/Triton 专用包不在范围内。
-- 原包完整保留，导出副本中个人台账路径和现场地址示例已通用化。源目录没有修改。
-- 导出时修正了 3 处 frontmatter 格式：过长 description、description 中的箭头字符和非规范 skill 名称；补齐了 main2main 引用的版本策略文档，修正了历史发布包的资源路径。
-- 包来源、许可证信息和导出调整见 [skills-manifest.json](skills-manifest.json)。来源工作区为 [vllm-ascend-workspace](https://github.com/Yuli-yx/vllm-ascend-workspace)，模型适配和发布相关包来自本机 vLLM-Ascend checkout；HIXL 配套包来自本机 HIXL 源码包，其他包来自本机已安装 skills。
-- 原有包中的平台、版本、工具或路径约定需结合目标环境核对；特别是模型适配和历史发布包保留了原工作流约定。
+检查驱动、CANN、框架配套、容器和设备环境。
 
-## 许可证
+- [machine-management](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/machine-management/SKILL.md) — 接入、验证和修复远端 NPU 主机
+  `Ascend` `vLLM Ascend` `设备取决于检查项` `流程编排` · [条目](catalog/skills/machine-management.yaml)
+- [remote-code-parity](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/remote-code-parity/SKILL.md) — 核对本地与远端执行源码一致性
+  `Ascend` `vLLM Ascend` `主机工具` `流程编排` · [条目](catalog/skills/remote-code-parity.yaml)
+- [remote-toolbox](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/remote-toolbox/SKILL.md) — 执行远端任务、同步、服务与产物操作
+  `Ascend` `vLLM Ascend` `主机工具` `流程编排` · [条目](catalog/skills/remote-toolbox.yaml)
+- [repo-init](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/repo-init/SKILL.md) — 初始化工作区、GitHub 与源码子模块
+  `Ascend` `vLLM Ascend` `主机工具` `流程编排` · [条目](catalog/skills/repo-init.yaml)
+- [session-management](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/session-management/SKILL.md) — 创建与管理隔离开发会话和资源租约
+  `Ascend` `vLLM Ascend` `主机工具` `流程编排` · [条目](catalog/skills/session-management.yaml)
+- [vllm-ascend-build](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/vllm-ascend-build/SKILL.md) — 构建固定版本并核对远端运行路径
+  `Ascend` `vLLM Ascend` `主机工具` `流程编排` · [条目](catalog/skills/vllm-ascend-build.yaml)
 
-这是多来源合集，各包保留原有版权和许可证。`LICENSES/` 包含来源工作区的 MIT、vLLM-Ascend 的 Apache-2.0 和 HIXL 的 CANN 2.0 文本。未明确声明许可证的本地包在清单中标为 `unspecified`，本合集不为这些文件追加或推定授权。
+<a id="model-integration"></a>
 
-## 本次验证范围
+### 模型接入与转换
 
-28 个 skill 的 frontmatter 与命名检查通过；159 个 Python 文件通过语法检查；服务启动、远端命令和目标解析入口通过本地 `--help` 加载检查。真实环境连接、NPU 推理、通信、精度和性能尚未在此合集上验证。
+接入模型、转换权重，并核对配置与输入输出。
+
+- [main2main](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/main2main/SKILL.md) — 分析并适配 vLLM 主线兼容性变化
+  `Ascend` `vLLM Ascend` `离线分析` `流程编排` · [条目](catalog/skills/main2main.yaml)
+- [modelscope](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/modelscope/SKILL.md) — 下载、续传和校验 ModelScope 权重
+  `Ascend` `vLLM Ascend` `主机工具` `流程编排` · [条目](catalog/skills/modelscope.yaml)
+- [vllm-ascend-model-adapter](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/vllm-ascend-model-adapter/SKILL.md) — 适配与调试 Ascend 上的 vLLM 模型
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/vllm-ascend-model-adapter.yaml)
+
+<a id="serving"></a>
+
+### 服务部署与扩展
+
+部署共置或 PD 分离服务，验证拓扑、端点与请求。
+
+- [ascend-memcache-pooling](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/skills/ascend-memcache-pooling/SKILL.md) — 部署 A3/A5 DRAM/SSD 池化，核对 P/D 与 Host RoCE，并监控多 DP 前缀复用
+  `Ascend` `vLLM Ascend` `MemCache` `SSD` `执行需 NPU` `流程编排` · [条目](catalog/skills/ascend-memcache-pooling.yaml)
+- [vllm-ascend-serving](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/vllm-ascend-serving/SKILL.md) — 启动、检查与清理归属明确的推理服务
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/vllm-ascend-serving.yaml)
+
+<a id="correctness"></a>
+
+### 正确性与精度
+
+固定参考与用例矩阵，比较输出、误差和任务质量。
+
+- [aisbench-accuracy](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/aisbench-accuracy/SKILL.md) — 执行数据集精度评估与采样配置对齐
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/aisbench-accuracy.yaml)
+
+<a id="benchmarking"></a>
+
+### 性能评测与回归
+
+通过预热、重复测量和受控对比评估吞吐与延迟。
+
+- [aisbench-pd-benchmark](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/aisbench-pd-benchmark/SKILL.md) — 准备并执行 AISBench 重复前缀与 P/D 性能评测
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/aisbench-pd-benchmark.yaml)
+- [pd-pure-role-benchmark](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/pd-pure-role-benchmark/SKILL.md) — 验收纯 P、纯 D 容量和端到端稳态 QPS
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/pd-pure-role-benchmark.yaml)
+- [vllm-ascend-benchmark](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/vllm-ascend-benchmark/SKILL.md) — 测量在线推理性能并保留原生结果
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/vllm-ascend-benchmark.yaml)
+
+<a id="profiling"></a>
+
+### Profiling 与瓶颈分析
+
+采集或分析 trace、逐 rank 行为与 HBM 占用，保留证据。
+
+- [ascend-memory-profiling](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/ascend-memory-profiling/SKILL.md) — 采集和归因推理服务的 HBM 占用
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/ascend-memory-profiling.yaml)
+- [ascend-profiling-analysis](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/ascend-profiling-analysis/SKILL.md) — 分析算子、step、layer 和跨 rank profiling
+  `Ascend` `vLLM Ascend` `离线分析` `流程编排` · [条目](catalog/skills/ascend-profiling-analysis.yaml)
+- [ascend-profiling-collection](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/ascend-profiling-collection/SKILL.md) — 采集单次 Ascend torch profiler 工作负载
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/ascend-profiling-collection.yaml)
+
+<a id="debugging"></a>
+
+### 故障诊断
+
+缩小启动、通信、图执行和算子异常的复现范围并验证修复。
+
+- [debugging-vllm-ascend-pd-accuracy](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/debugging-vllm-ascend-pd-accuracy/SKILL.md) — 定界 P/D 输出精度差异并执行对照
+  `Ascend` `vLLM Ascend` `执行需 NPU` `流程编排` · [条目](catalog/skills/debugging-vllm-ascend-pd-accuracy.yaml)
+- [driver-peermem-check](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/driver-peermem-check/SKILL.md) — 检查驱动包的 peer-memory 支持
+  `Ascend` `HIXL` `离线分析` `流程编排` · [条目](catalog/skills/driver-peermem-check.yaml)
+- [hixl-troubleshoot](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/hixl-troubleshoot/SKILL.md) — 定界 HIXL/ADXL 建链与传输失败
+  `Ascend` `HIXL` `执行需 NPU` `流程编排` · [条目](catalog/skills/hixl-troubleshoot.yaml)
+
+<a id="delivery"></a>
+
+### 工程交付与运行维护
+
+将变更映射到构建、正确性和性能验证，记录覆盖范围。
+
+- [hixl-pr-review](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/hixl-pr-review/SKILL.md) — 按 HIXL 规则检视代码变更
+  `Ascend` `HIXL` `离线分析` `流程编排` · [条目](catalog/skills/hixl-pr-review.yaml)
+- [hixl-srs-doc-generator](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/hixl-srs-doc-generator/SKILL.md) — 编写和评审 HIXL 需求规格设计
+  `Ascend` `HIXL` `离线分析` `流程编排` · [条目](catalog/skills/hixl-srs-doc-generator.yaml)
+- [hixl-ut-generator](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/hixl-ut-generator/SKILL.md) — 生成与现有风格一致的 HIXL 单元测试方案
+  `Ascend` `HIXL` `离线分析` `流程编排` · [条目](catalog/skills/hixl-ut-generator.yaml)
+- [vllm-ascend-release-note-writer](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/vllm-ascend-release-note-writer/SKILL.md) — 整理版本说明与发布记录
+  `Ascend` `vLLM Ascend` `离线分析` `流程编排` · [条目](catalog/skills/vllm-ascend-release-note-writer.yaml)
+- [vllm-ascend-release](https://github.com/Yuli-yx/awesome-va-skills/blob/7d3aa5f3b55049a2f917b4ca682c1e9963033c18/.agents/skills/vllm-ascend-release/SKILL.md) — 组织 vLLM Ascend 发布检查和交付
+  `Ascend` `vLLM Ascend` `离线分析` `流程编排` · [条目](catalog/skills/vllm-ascend-release.yaml)
+
+<!-- CATALOG:END -->

@@ -1,0 +1,23 @@
+id: pd-pure-role-benchmark
+category: benchmarking
+summary:
+  zh: 验收纯 P、纯 D 容量和端到端稳态 QPS
+  en: Prepare and run AISBench pure Prefill, pure Decode, and end-to-end capacity
+    acceptance for a 1P1D deployment, with TTFT-constrained request rates, TPOT-constrained
+    concurrency, steady-stage results, and MTP-aware QPS comparisons.
+tags:
+- Ascend
+- vLLM Ascend
+execution: npu
+role: workflow
+source:
+  project: va-workflows
+  path: .agents/skills/pd-pure-role-benchmark/SKILL.md
+  sha256: 10ce3fbfe70d095d2393159a70104501ed0e89f038f8a34419af249bbe450a6b
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

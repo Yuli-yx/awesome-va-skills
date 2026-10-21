@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome MindIE Skills</title>
+  <desc id="desc">Five connected nodes form an M, representing composable inference skills.</desc>
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="#0F766E"/>
+  <path d="M27 91V39L64 76L101 39V91" fill="none" stroke="#F8FAFC" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#F8FAFC">
+    <circle cx="27" cy="91" r="7"/><circle cx="27" cy="39" r="7"/>
+    <circle cx="101" cy="39" r="7"/><circle cx="101" cy="91" r="7"/>
+  </g>
+  <circle cx="64" cy="76" r="10" fill="#C4B5FD" stroke="#0F766E" stroke-width="3"/>
+</svg>

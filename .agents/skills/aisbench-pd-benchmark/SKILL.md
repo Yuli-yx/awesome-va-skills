@@ -1,9 +1,15 @@
 ---
 name: aisbench-pd-benchmark
+license: MIT
 description: Prepare and run AISBench performance cases for vLLM Ascend services and two-node PD proxy deployments, including tokenizer-based normal or repeated-prefix dataset construction, warmup and formal runs, exact concurrency/request-count semantics, and result capture. Use when the user explicitly requests aisbench, ais_bench, or aisbench_auto_tools_prefix. Do not use for vllm bench or profiler collection.
 ---
 
 # AISBench PD Benchmark
+
+Source: [wangxiaoteng888/vllm-ascend-workspace](https://github.com/wangxiaoteng888/vllm-ascend-workspace/tree/5fba343c1c2b3d896f1273e0ecb9b0581f8128d4/.agents/skills/aisbench-pd-benchmark).
+The source repository uses MIT and preserves Qi Mao's copyright notice.
+Yuli-yx maintains this adapted copy, including the warmup load/timing guidance.
+Keep the complete package and [MIT notice](LICENSE) when redistributing it.
 
 Build a reproducible AISBench run without modifying the shared tool checkout.
 For PD separation, send requests through the official PD proxy unless the user

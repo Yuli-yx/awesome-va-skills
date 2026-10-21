@@ -1,0 +1,24 @@
+id: aisbench-pd-benchmark
+category: benchmarking
+summary:
+  zh: 准备并执行 AISBench 重复前缀与 P/D 性能评测
+  en: Prepare and run AISBench performance cases for vLLM Ascend services and two-node
+    PD proxy deployments, including tokenizer-based normal or repeated-prefix dataset
+    construction, warmup and formal runs, exact concurrency/request-count semantics,
+    and result capture.
+tags:
+- Ascend
+- vLLM Ascend
+execution: npu
+role: workflow
+source:
+  project: va-workflows
+  path: .agents/skills/aisbench-pd-benchmark/SKILL.md
+  sha256: cf558cd50f3a05089b1dff3482c7a50807e299aa9dd3ec5edb26d290c8ae6cb3
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

@@ -18,7 +18,7 @@
 允许的容器重启命令只有：
 
 ```bash
-docker restart --time 30 pd_kimi_zyx
+docker restart --time 30 -- <exact-container-name-from-inventory>
 ```
 
 执行前必须再次确认精确名称和容器 ID；执行后重新检查容器 ID、挂载、NPU 数量、进程命令和服务健康。不能使用 `docker restart $(...)`、模糊 name filter 或按前缀匹配。

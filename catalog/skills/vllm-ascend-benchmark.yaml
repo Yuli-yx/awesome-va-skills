@@ -1,0 +1,21 @@
+id: vllm-ascend-benchmark
+category: benchmarking
+summary:
+  zh: 测量在线推理性能并保留原生结果
+  en: Run vLLM online-serving benchmarks on a workspace-managed remote container.
+tags:
+- Ascend
+- vLLM Ascend
+execution: npu
+role: workflow
+source:
+  project: va-workflows
+  path: .agents/skills/vllm-ascend-benchmark/SKILL.md
+  sha256: af836aa5bf98b5b28e9ec0156168b29b2ab30c1b858ae822126b4f67f18ffa98
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

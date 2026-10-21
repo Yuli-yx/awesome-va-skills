@@ -1,0 +1,25 @@
+id: ascend-memcache-pooling
+category: serving
+summary:
+  zh: 部署 A3/A5 DRAM/SSD 池化，核对 P/D 与 Host RoCE，并监控多 DP 前缀复用
+  en: Deploy and inspect Ascend A3/A5 MemCache KV pools over SDMA, UB, UBoE or supported
+    Host RoCE; plan DRAM/SSD owners, preserve P/D transfer, and monitor multi-DP HBM,
+    external reuse and SSD readback evidence..
+tags:
+- Ascend
+- vLLM Ascend
+- MemCache
+- SSD
+execution: npu
+role: workflow
+source:
+  project: va-pooling-workflows
+  path: skills/ascend-memcache-pooling/SKILL.md
+  sha256: dec107f41db6bc246a318f9e0f69cb4b7984427cd9b90f525977b569b3f5f7c6
+review:
+  status: definition-reviewed
+  date: '2026-10-21'
+  evidence: evidence/company-layout-definition-review-2026-10-21.md
+validation:
+  status: not-recorded
+  cases: []

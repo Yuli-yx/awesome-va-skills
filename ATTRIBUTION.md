@@ -97,9 +97,16 @@ the AISBench/Mooncake application URLs for the skill authors' source URLs, or
 claim these are all original work by this collection's maintainer. Resolve the
 original package provenance and license before recommending them upstream.
 
-## Deferred work
+## Integrated pooling package
 
-The A5 MemCache pooling draft is outside the current catalogue contribution.
-Any later submission needs its own source, license, package and validation
-review. Existing local drafts and runtime results are not changed by this
-attribution record.
+`skills/ascend-memcache-pooling` retains zouyida2052's A3/A5/SSD workflow at
+`f5108884c387175025eecf2e58021828f802a204` under CC0-1.0 and adds Yuli-yx's
+Host RoCE/P-D guidance, read-only monitor and regression tests under MIT.
+See its complete NOTICE and LICENSES directory. The old private/vendor draft
+is not redistributed as part of the integrated package.
+
+## Company-format catalogue
+
+Catalogue schema, renderer, validator and supporting documentation originate
+from mindie-agent/awesome-mindie-skills at `64c2457` under CC0-1.0. Runtime skill
+packages and workspace tools retain their separate original licenses.

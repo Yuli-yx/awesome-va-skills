@@ -1,6 +1,6 @@
 {
   "collected_on": "2026-10-14",
-  "selection": "One canonical package per skill name; current workspace preferred; transport development included as companion skills.",
+  "selection": "Complete preserved packages; company-compatible catalogue for license-resolved entries; unresolved imports remain archived.",
   "skills": [
     {
       "name": "aisbench-accuracy",
@@ -8,7 +8,12 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 2,
-      "package_sha256": "5f64eaf696aa4981c0df26e280de397118fbb834dce40b143183de32a0081b4e"
+      "package_sha256": "94ca3dffff4ee966d090446b47e417633074aa9c7d55eec4d922df2efdd91b6e",
+      "file_sha256": {
+        "references/gsm8k.md": "9e736ec47fe78b8e0672a9af013477387450dbd405756a2e50a17d60bd2291ea",
+        "SKILL.md": "e25235228d1840f838c86ab1f6c36eabea8899208462c7137708cf82898fc224"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "ascend-memory-profiling",
@@ -16,7 +21,17 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 7,
-      "package_sha256": "964b8677957bb35e613c8be055a96873567ff170741ecc13d109a96478eb6d90"
+      "package_sha256": "8a3db50c3ac99b8d741737eb01b6670841e2d8d48e64b0379337232de46253c2",
+      "file_sha256": {
+        "references/methodology.md": "aa11be6cc845a7fe6f566b7d75e55291261ae3c68ee37466fcfef3f067b931c5",
+        "references/msprof_fields.md": "6bd6fca0a82ad0b464405121715305158b15165413472444629dad543df9bcfb",
+        "scripts/_common.py": "057e51ff9eb4aaa164179b1e75e5316b7d2dd547d3ae960252cec272a3bd2d4e",
+        "scripts/mem_analyze.py": "4d6bea5f34e3e3c2d42688eae3d7bd7fe8d0b5f56da37ba9a7071b0a388c7599",
+        "scripts/mem_collect.py": "26a3117f1f463776e5de16c32941bbe1e7878a1744a5f65317218798bf7dc65f",
+        "scripts/weight_inspector.py": "c390d5a8fea6a8981fcd977173e141c21ffd6bf9424c79f0f3e67caa7d7d41f1",
+        "SKILL.md": "b0f7896bedaf9c2efe9337bc4e4f9abd78c9b40c834b87673015d0bf3c05472a"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "ascend-profiling-analysis",
@@ -24,7 +39,58 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 48,
-      "package_sha256": "e288cd29324fed4547163c655b41b0a061d02d924f6d716af4c19bf27c27ad10"
+      "package_sha256": "ccc9a0bfd91a840f0ac57b9193404b8ea15e87d050f5606a9610ae83b89357c2",
+      "file_sha256": {
+        "references/acceptance.md": "938883194c9505a715e8e3eb791aafcfbc3781787cdbbad7b6f628df19e22921",
+        "references/behavior.md": "30613059fb75be70af06b1c679608edbef4a114a725d22f0f1115fbc0d0db0ca",
+        "references/command-recipes.md": "edc9c544614b839553b11de3d632ee8f7a7bf336b33d049cf5138bc9501382f0",
+        "references/deferred-work.md": "533ed3b387d51a9986cbe1a9cb745e108c3b4971080b9ac91e26dcb3d3b95e8b",
+        "scripts/_common.py": "b2f7a0148c7423a7defa527ebefccb566fcacf8700eb2bb376e9977a76b40277",
+        "scripts/ascend_profile/__init__.py": "b750d8ebfff436cd554a70e203f08542cf2eba20d6fea5d363f62333da0bc93e",
+        "scripts/ascend_profile/analyze.py": "2ecf497a38aa5dcbbff92afce80fbb103f047021b91cf1269ba75ac8d23f58c9",
+        "scripts/ascend_profile/classify.py": "ae3492091d8e00fd52419ce4499e29f7e37b79305a19782900e6e80d18b9be12",
+        "scripts/ascend_profile/common.py": "1dc4422dc6e8e658489a8f92f59b000d4d2afb439eb839b025721f6a887cd83e",
+        "scripts/ascend_profile/cross_rank.py": "68734d147a0acc68b111ca893001788cc7dc07e968d15804f6a0c27d6fba2cd5",
+        "scripts/ascend_profile/diagnostics.py": "1079619e41ec3d6c24644d20073d46a73b763053efccd5a35b83f37ea47d7f8b",
+        "scripts/ascend_profile/html_report.py": "fd5a5f23257ffbec73678a0f29c74405e27bb412ca39af3696632f18dc6fd8f0",
+        "scripts/ascend_profile/knowledge/attention_families.yaml": "1a7d4b96c8cac3c243fbb7926707711f5c94d39dba5f496153512d169196378f",
+        "scripts/ascend_profile/knowledge/block_taxonomy.md": "dca37a4b584fef2e111d6a54ceb94ae952508ae9cf68d95d930bdfbabb1f2ef3",
+        "scripts/ascend_profile/knowledge/bound_classification.md": "491424dcd63f40acfe0b7fa693bb6c38181504b327b73acee2769f90f9bb0d6c",
+        "scripts/ascend_profile/knowledge/communication_taxonomy.md": "ad4c0f127c089760358d1238c206d487bade134b77d20986591bb0f7225abe8d",
+        "scripts/ascend_profile/knowledge/index.md": "3b503d24736d7995443a0ed6104133b5cd9059ccf362ec096b7ecaed8f293158",
+        "scripts/ascend_profile/knowledge/kernel_signatures.yaml": "bd1c32c212ac97bffe41bad622085e8d80de1e988d431f717723f251e42be0c8",
+        "scripts/ascend_profile/knowledge/known_counterexamples.md": "1e384e7dbcfb3176801a01a929d234f96856de85beb28885a733ab75cb8ee1f8",
+        "scripts/ascend_profile/knowledge/model_architectures.yaml": "a2554c54217f4eafe28b3c5882eee86cb94d8d593b676b87c1c598d93a26c82c",
+        "scripts/ascend_profile/knowledge/moe_families.yaml": "372dbddd5aad89b3a6f4d7faeedec6f282eaa8f61013586800182df40b91745f",
+        "scripts/ascend_profile/knowledge/pipeline_taxonomy.md": "ac29e7ae246599229bb3cc804fbd710c1c38d055a8549e9bb1c06647bc1dd1cf",
+        "scripts/ascend_profile/knowledge/README.md": "9bbc6725994909f94812059039666a82e3ae0f3f26608cfce975ed45b504cafe",
+        "scripts/ascend_profile/knowledge/semantic_conventions.yaml": "33014a05d057f99215b5ef2485fdd4c473223ab30ed4edb217f1ff6326072b8a",
+        "scripts/ascend_profile/knowledge/step_anatomy.md": "42809b7764d2ea4c3d6fac3e51e153f85fcbd30483bf2e561a036e2dd768976c",
+        "scripts/ascend_profile/knowledge/step_class_grouping.md": "8002050d8e1699b14080bcfc25575d1b3efa287439f8929adedb13546a423730",
+        "scripts/ascend_profile/normalize.py": "7448c1dfecb700c0174154f2f6094b581abee39b93b1f3c40988de211c2f8e7e",
+        "scripts/ascend_profile/README.md": "ad77de40bf48892fe0e47b5bf1c2cfabd136ffd2e1e45f0b76df5ae915297dfe",
+        "scripts/ascend_profile/report.py": "2e0620c3c4e968a38f24e305f77486a4967d0a48ea9dbd78093e0f2f4f5ccfea",
+        "scripts/ascend_profile/schemas/analysis_bundle.schema.json": "d51f8af1ebb066dbe0ddc70344cb368ee586a35f84a03fb813b7728860ea2ba4",
+        "scripts/ascend_profile/segment.py": "6ea8a17db45e53e62ed89104ea4c20aa84ada467c675c905ea067b8553a50d47",
+        "scripts/ascend_profile/summarize.py": "9e0599dd9b66e31985485d6dd7cf389fa6c891fa9964cf822800db1aa87c2033",
+        "scripts/ascend_profile/sweep.py": "cbc63e5c1235e09947e695f8ee64a0b5df3c84f74c84f3e0ce77871a4d358752",
+        "scripts/profile_analyze.py": "1418cc7e06f837be09f4e423b70f6fb58df1b08bf3fdaf68351be3b878344773",
+        "scripts/profile_sweep.py": "162973c239e93ac569b9b2b34bc7ac0d95cf03e500afa54c56788f3b2437ab4d",
+        "SKILL.md": "f9becfdb254bddd97b4b8127b58e14b3eb391d256ce4e85d096cd995d5175cdc",
+        "tests/conftest.py": "d5c0f03236d391c7d24e20be9314f5833e280a30d277d4ead95b240f5baf1148",
+        "tests/README.md": "7a414891171465453ee606aa7b8c2315bc058840cc1365f517fe9b3759ee49d1",
+        "tests/test_attention_families.py": "64e93462e60c1eab0d40ce4212c577fb5b6a9e05403cf1742b95481b0f7341b5",
+        "tests/test_html_diagnosis_key.py": "88c16d3c073c912123da5c3177b65dc62429d1d99559e96f2a7cf53980aaceb7",
+        "tests/test_kernel_signatures.py": "f7d09de473ab9a3c825ca6d668e13fa7d7cffdb43c91c8f592a749a90f19f861",
+        "tests/test_manifest_schema.py": "0a1f8dd77c9ffe76d9b976504386cec5f7aff4f320e4048ca40c4672a7f798a4",
+        "tests/test_moe_families.py": "f53633e4f328ad3abec8150b2652b48888fe7cd716f24e50cee5a9e5a742d101",
+        "tests/test_segment_validator.py": "9de77fefb9ae4e2b124d5c05de2a47bb435fec57b38e2c40c5c49771beb679fc",
+        "tests/test_semantic_conventions.py": "dfaabcb7c0f675e495533db730857e1f5461dac0210e6de050c67865b053c70f",
+        "tests/test_skill_contract.py": "3adfa3f9f11431faaa97db7b1c6ecade1a667f0077c0d40362a11422924c7894",
+        "tests/test_stage_validation.py": "32ca81d99a9c552b5ff0d61909700e05aaeb3180e6416d92b11b97d8a0b4d3d2",
+        "tests/test_timeout.py": "31127e0c38eaac063e502a4b803ff68f69c27fb2b813cdfe18c6b6b62c2c8ac0"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "ascend-profiling-collection",
@@ -32,7 +98,18 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 8,
-      "package_sha256": "91f43d6fa6e22e6574370585ca651f539dcb2a0e10d6026f7701b192081ae1a9"
+      "package_sha256": "3bde3852cbd61a6f25e959b2cfb61cd0338f22e8a1a52cabed245b6903f92cb6",
+      "file_sha256": {
+        "references/acceptance.md": "9525df47cc831cb3ba5643f20b844e51f9083a2d00cc38b0fe0c582b1a476834",
+        "references/behavior.md": "07c5777137826a76bab52df948995e9f321999b75b4a453e44039a64799e59bb",
+        "references/command-recipes.md": "9f4e9259fd60c9380c8a484ff8c04da856c95aa91ffe30b10512918119edd9af",
+        "scripts/_common.py": "fcbaacab011d08162a390dfe7769a467bf068ca5f72262a36afcd2f669164be0",
+        "scripts/collect_torch_profile_case.py": "c7ae477cc269fe1764691f91412183e436ad977a11841ed596afe33f44dd2e7b",
+        "scripts/profile_control.py": "37223342ebfebccd04282a0b5489a0fbb905a1d3f454cdda8ecb96d384dc5286",
+        "scripts/run_remote_analyse.py": "34d201f7e524c0953c8c57e6afd11012d2f6b6cca354251c449d07e545d5968b",
+        "SKILL.md": "7bb6c9d78cc03f7bafac07e06b6011c0c8ca51da0fc00c21cc072e88f0908ca3"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "machine-management",
@@ -40,7 +117,21 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 11,
-      "package_sha256": "d7d8041b35de09929e53e3338dd963b8c4b95676abf3c4ad77ed55ea47c7a5b2"
+      "package_sha256": "2d8ea842717c7ffacfea016f830808a00b6f3fc0c8f7bf1bb1d767a8a4a89c1f",
+      "file_sha256": {
+        "references/acceptance.md": "73a52b8fb539d891305855b474b12a7427f756dcf71e959385e6468b287e4b7b",
+        "references/behavior.md": "776e578ce0fde2c433179becad57d616b46747db8be6a73494d8bd952892bb7f",
+        "references/command-recipes.md": "8f24ebb207bae73a37a9b144a2561828d456499417f0015fa7e030c49841ffa3",
+        "scripts/_workflow_common.py": "43f14939c489d966091279557edb5cb0bdce07079606e54da0ca98a2b5c39d49",
+        "scripts/inventory.py": "a68dc49de3e5b20102e7f5af0ab5955c947c0265c8ab0a6d8101632dda60fa40",
+        "scripts/machine_add.py": "bc1d72f6039841a56b518fcb9b8fb333a4dc44806f16e0df38a9408b99465be1",
+        "scripts/machine_remove.py": "7f7641ee85a378651cb3fd2867d65a2e641a976ac01cd6d85e550e8b19c02fbb",
+        "scripts/machine_repair.py": "10c1133c1e27b47438bc21d044f11529f430b190593a726e4d233f0927050d0d",
+        "scripts/machine_verify.py": "9eef9c860a8e805b9030552cee50329e4d142f0a28a8926f41314a9dd0f097c8",
+        "scripts/manage_machine.py": "67d205c4704a93e6f051fe25d2faf0bf7b651c9bdde5b334b05ce117bc525c1f",
+        "SKILL.md": "52afb57d3926f6f9176b185c297eaa4e6ec5b44df72ea6ded0431391869a939e"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "modelscope",
@@ -48,7 +139,16 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 6,
-      "package_sha256": "5ab73f7a9b6d9e19bbeafda77b2f8039e297b886395561fee6bd19bc54ccbf0c"
+      "package_sha256": "f46cc81e8816ff8d622360eb3c9bf7ecbc25da051b409b67c93fa311b9830a8a",
+      "file_sha256": {
+        "agents/openai.yaml": "fc1b7d6e021ad00946c1f51be95c6767e65ae1819c0d4a7e91fd365fd43766de",
+        "scripts/download_from_modelscope.py": "d41ce5e33ee8278d5d66d3ef935aeef430ecdca4d9c3b5110a1c3d5def4148d0",
+        "scripts/modelscope_auto.py": "c6f916a200e78190dede5d8dc40eb558bbe8c0f68c44d4d928917bf78fc5beb8",
+        "scripts/modelscope_download_status.py": "eae1993fa748fad9c331cfd63e9b3642bf64b59c74aa6666ea92d04c97421073",
+        "scripts/verify_modelscope_sha256.py": "390afd8f7ce65bc6679530a942cfac6d0b4c6afa4b37584cf4c675a9a8d5bc62",
+        "SKILL.md": "b4b5377a496ddf2a95eb758f7563967d024226c58a4598b4e874beb071f74bcb"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "remote-code-parity",
@@ -56,7 +156,19 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 9,
-      "package_sha256": "b60856833ccc3b2056ec1b9486ed4928b9187718597d22c7b8fa7c0307d2d93c"
+      "package_sha256": "314489d8a5c28d3be8a9a78dee5016b6fbab54b24e0335df656b8b535cf18849",
+      "file_sha256": {
+        "references/acceptance.md": "f9e98cb72c840bbcf954a138a6fb517c66c450100231cd1b0773ab52243b1031",
+        "references/behavior.md": "9d6819a2cd381c33381b74dc783a39c0fdce84d1ba1122926cdfaf5ca8232f49",
+        "references/command-recipes.md": "10a81335355dc96e42ef6de1570670a9880c1a8f7574edd417e935277e886a38",
+        "scripts/common.py": "693ad5174edf371f188b589640b4344c0da06ae922662b6acc76f65c1b064e6e",
+        "scripts/gc_runtime_cache.py": "53cf5ecf30d3363eab85762ab0ee91cb4558fef00545384de7d5f95e6d1a3f80",
+        "scripts/install_consent.py": "3e5aee7d2cc27910780c6ff226230cb8243d5b50793ee94bd31ec88701ab64f4",
+        "scripts/parity_sync.py": "702b4d880cb5adae0ec96f5a49cbcdafe70b8f55f01349146ca513c5e5e1e7f2",
+        "scripts/remote_code_parity.py": "699205584ded98276ef8afe341cf9710a6c2fe87358b51342824e881c9208b99",
+        "SKILL.md": "315aad9e08078f040c46563f1f8207c9c8517b8337c5eb19c54c8ceaaeae1aed"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "remote-toolbox",
@@ -64,7 +176,15 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 5,
-      "package_sha256": "c6a4ac0e39667f6b6f836ea05aa9eb37960f64867708e1a472a281dad468c966"
+      "package_sha256": "0443ae0be64f943149246cc2e74f3c4ab67e337184077c7d65699e9771059118",
+      "file_sha256": {
+        "references/acceptance.md": "5b303ff17fc628e8ee15c07031f78deba62dbeada3732a55e1bd351e61c336cb",
+        "references/behavior.md": "a70cc948f28510aa1bffefb3ebbb36c8f054e921daf0db7e209dc8ec0ad8f1ca",
+        "references/command-recipes.md": "e9035c7df42763edddd85fd2203e5a9860a45091fc6e76067756431800f81359",
+        "references/stress-validation.md": "93e172c2d7b1ff76c95e788b6bd5711fcef6d2977e25942d6a5ff18876116401",
+        "SKILL.md": "508452de949b2c2ed44fbe19db6d5b4ea762af0b1eedcdd84e3fff6da9389618"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "repo-init",
@@ -72,7 +192,21 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 11,
-      "package_sha256": "33bef16cbd3d9479b723864937af4cd40e9013727051333bea1f26b837b69628"
+      "package_sha256": "cb10314e02f525f6772f6b6c914e4fb449c1b32ac8dbd298191716c097cbb02e",
+      "file_sha256": {
+        "references/acceptance.md": "93e3499a8bbba684c46c7c54d6b22fbdcc294746709d987b47168a3f1d6e4c7b",
+        "references/behavior.md": "9241533073a3d27b31bf5497b8370c880233c6f7dbbd7c2c21082052e31d83a5",
+        "references/command-recipes.md": "b6f852bbee306fc743a4580aa0821c25b7a0a026d0da2247035c76deb0d45336",
+        "scripts/_profile_choice_common.py": "906eb1d955f7699f64ab7cfca2fd3c5f758b033f0cbfb8a05862b237523ba849",
+        "scripts/install-gh-user.ps1": "61699862e1936fcf79c214c499b6f03f73c0c535c1a6183fbc29c7b3ef9131b8",
+        "scripts/install_gh_user.py": "8a700ad925cbadd210447f7f3580ddcde406c69b4b31f32c43eb10d39bf5a620",
+        "scripts/repo_init_probe.py": "0905474feab7cbfda36cbc3f564b20483cda07cef8bf3e8085ea41226fc34cb2",
+        "scripts/repo_init_profile.py": "71c2461bb5e32b3daef4e92b950f39942d523ea426bf2b44c47a4f7b44530da9",
+        "scripts/repo_topology.py": "45d1915b6eff625662bbacb81e2f0db550211fd251f8d1684a1ed8df740c91d3",
+        "scripts/resolve_vllm_ci_pin.py": "4e673b6c20527692714dd975161461403267745f910629372343a1be1a476511",
+        "SKILL.md": "42572c8325ba759d89999fb70b8727488c66c7f1bb82a33ab5d90ccfac3e9001"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "session-management",
@@ -80,7 +214,19 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 9,
-      "package_sha256": "4650b354b7dc67bf39bd9de7abc5c987fb2b230dc00daffa1aa867fcd4407c06"
+      "package_sha256": "2910de49683c00d6bfa8d654401a72b9050763e9815b7dbb0b92af70d08f4d4d",
+      "file_sha256": {
+        "references/acceptance.md": "584a8cfddd46d311203d9d23087a7ef837213fb354d15d1379ec802a3524b3aa",
+        "references/behavior.md": "f6c9943f6fff825ca745af7053144023eb64dd96dff98dd714a9c174d24fbfdb",
+        "references/command-recipes.md": "7a34d62ffd61128c3f373e5dfd7bcd58cbaaab7fe979bc2a730cca432a5c77de",
+        "scripts/session_create.py": "249b12dc9dfc421d27a7b4b54a829ef1b3320a886afde90f4f649295e5819fcc",
+        "scripts/session_gc.py": "f3985858b992d6cdb6bae62ffc286162727f179cfa5146c1cafa5898ba112d61",
+        "scripts/session_list.py": "9f709cf44b0aa68a78fcd011cf2e11c0185ca192b6cef02094bcdfa821c27987",
+        "scripts/session_remove.py": "09c7215d1ae6fbf1640106f22b7d2417439c34ec2b4b5b0fbaacb1a418da210b",
+        "scripts/session_status.py": "301452db4844d15140a08b59a673af24cd5254d6ec5d9587cf105cef4d298b38",
+        "SKILL.md": "7fe21ceb5b0c302b20091b0cb71a3c1a827d814a93a7828e8bc2146f1ac7cef4"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-benchmark",
@@ -88,7 +234,16 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 6,
-      "package_sha256": "8356bcee0371fdb24164ee383b1233b71eedd57ff66a8c02c38cc5ff55603509"
+      "package_sha256": "e62d60c04606c93bc1bbcad3e7fa0a764212a0c79fd9c4e7201e215c197a23e5",
+      "file_sha256": {
+        "references/acceptance.md": "c94de490df03a4137c8493f2baef4ead170bc475dfdfe89e8e32697ce2fc458c",
+        "references/behavior.md": "3a0c41d5f8a585dc849f9bcd2896bd6a421732124a14d83c185a378235d1725b",
+        "references/command-recipes.md": "2555c5f6a87e431c8675f1cf25ce011903034066db2e7435ff260b87bc7a0f5b",
+        "scripts/_common.py": "35bae667dca1e8783df14bd5f80afd033e0aa092bc127d25348f34348ea7b445",
+        "scripts/bench_run.py": "fa64a3e8417b8f1c6490232bc1e18180c5ed81cab733a0c58c1e599b7d9da44b",
+        "SKILL.md": "af836aa5bf98b5b28e9ec0156168b29b2ab30c1b858ae822126b4f67f18ffa98"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-build",
@@ -96,7 +251,12 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 2,
-      "package_sha256": "3b98460d2519b09a95bfbd5b32c1225c66f2065aa9dbc9ededf3a4f63313b4fa"
+      "package_sha256": "c908419a23f7d3e0b8b29a0e0cb8936dbb6e4bf13cc1ea964c4b29b07be98fc1",
+      "file_sha256": {
+        "references/pr14872.md": "5f005040c3640cb9a1a756325e5d696ccbb642c1434eb12ab34509643b4b5ebc",
+        "SKILL.md": "ee67763b7f6a17348976d43c1765bf12d0559adf7b837a0b251d26b8a01f53d5"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-serving",
@@ -104,7 +264,20 @@
       "source_group": "workspace",
       "license": "MIT",
       "file_count": 10,
-      "package_sha256": "f48efaeda61002966156397529d116a8d1ac5e1c7359098eb304aa7c55046273"
+      "package_sha256": "b0c47ef1ab34fb0f2dadd300c136e4e9a80a63288104434eecbc5b49bbde2505",
+      "file_sha256": {
+        "references/acceptance.md": "ca696f1d809433e201e3a5adc99cd1d4cf96c03c3f2ec554b8944693eecd3690",
+        "references/behavior.md": "df2dd61ce5d175fe8f7a94f18f82fea76f675d5bce750ea111fa015c098effc0",
+        "references/command-recipes.md": "f31ed92811c39ed4f0646e7e34ac089f9ea09664562d2431e585c6449e312a70",
+        "references/process-ownership.md": "fdc2b330aff3f7c7af51b6fee29b9a3d9231510915ebdbbbcd702f69b0a70606",
+        "scripts/_common.py": "10001e3a414702ac1bab88569513112bb1cd80c3a34129ef86146205def0953d",
+        "scripts/serve_probe_npus.py": "ba8a7b66f3cf28d824a54b2850ba553c7738f0f285602e504a73c1d2f5403bb1",
+        "scripts/serve_start.py": "7a0cdf6286a55eb4aca05e92acf4ec7e509f35f4298d5884b38aaf0efaf2aae1",
+        "scripts/serve_status.py": "5fd77096d7d99e82eab5f839bb61bf2e6936701fb1fe60db5e5ed0889e899b95",
+        "scripts/serve_stop.py": "b6c06e16ec2e303d82571f02f666bd5b21075eaf6c5a0ea3dd66da7a35dd68b1",
+        "SKILL.md": "f18f8600d8a5d578162a2e3fa9758224cb0e4cd8b58bc75d21f5a399c47ab703"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "aisbench-pd-benchmark",
@@ -138,7 +311,13 @@
       "source_group": "global-skills",
       "license": "unspecified",
       "file_count": 3,
-      "package_sha256": "c709ffa6a390382b4ac589c89bdc9751d69cbb89bd40a91f76f9518a8a1e12e2"
+      "package_sha256": "b06f2adff4c46526e5a1e73fe84746a33cfb8a8d01e9581f8b42c1338cad5e21",
+      "file_sha256": {
+        "reference.md": "e184629088527208985665316e460fd3d9f937dae52a90528a03527a32d6a715",
+        "scripts/build_mooncake.sh": "cac31627d5c6fa1a3397f20dd9682c2dbcfda41ee8c2721a6b236350ef3578e2",
+        "SKILL.md": "504f6b0c73902329361efb9d42b9a5aea2bcf3199a1aafdbdd79d3dabd5020cd"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "hccl-auto-test",
@@ -146,14 +325,18 @@
       "source_group": "global-skills",
       "license": "unspecified",
       "file_count": 1,
-      "package_sha256": "3e98469ddd6949ff102f0e59d11322c55dd7036e009250928b0adcfed61b8742",
+      "package_sha256": "d34398800cd2ecef8652980168db39a0af6f499108eb38b4668e20e2d3f938b5",
       "source_origin": {
         "repository": "https://gitcode.com/qq_46749096/MindIE-PyMotor",
         "revision": "9f0f99c319090eec50a182eec390a1307254e2ae",
         "path": "personal_skills/hccl-auto-test",
         "author": "WZN-JJB",
         "license_status": "Personal branch has no explicit license; applicability of master Mulan PSL v2 awaits author confirmation."
-      }
+      },
+      "file_sha256": {
+        "SKILL.md": "70460252793b60e900f7a4f7301e61d2754caca5722e7be89a878102e9595db5"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "hixl-troubleshoot",
@@ -161,7 +344,21 @@
       "source_group": "global-skills",
       "license": "CANN-2.0",
       "file_count": 11,
-      "package_sha256": "36a21d4242bed51cf47140a089b66355615ad54e8a02b15449812010986dfb4f"
+      "package_sha256": "f5bbac41b20ec04f106b5d82f64ce08a51a2bcb7fd082d9770c088fea50b67e1",
+      "file_sha256": {
+        "references/differential-diagnosis.md": "3b623bed6efa036901de7d7ad8545be6f51534c0271c83a3ce2912935ee44527",
+        "references/env-check.md": "8956e6a25a3790e91523b426a6247bc1a111ee196b5cb01b7429d3298341029f",
+        "references/hixl-transfer-paths.md": "9529435ab102566a8c3f767825b7319ee65c3d410eca66e626ad89285efeca91",
+        "scripts/deps.sh": "5f146e09dc6ae79668fdb0ef7192be0867cd248017269b86f9a7909f6c9e710b",
+        "scripts/download-issue-logs.sh": "91b72663c2daf6cd8819e2e6825f84cc0bfe973dba40ba7f1700af61dbc77c39",
+        "scripts/log-triage.sh": "35e3127918c1c4c94eae920ef16e529f8376db9c702bf0cd939319c03470e116",
+        "scripts/log_timeline.py": "eb3aee8a47b310909fedd9a00bd0b59943dd98a44c3ffd93cdeda29f3376b50f",
+        "scripts/numa_intersect.py": "2f9b89be3117639410c6c82762b7d6cca698cc0d53af7ee8b26b513edaab0ce4",
+        "scripts/save-gitcode-jwt.sh": "db769e122a972a64e40a11fee2f565566598c32cf117cb68f21c0d77e647fbd2",
+        "scripts/source-align.sh": "c58aff808df03ab5eaff8204cc40192b1322181124d57ad5cd37810e1bab8fbe",
+        "SKILL.md": "5cbc9148120946961dcd85df0edf64ece8a07c9bd7ec68e39e003887e7ee32c0"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "pd-dfx-workbench",
@@ -169,7 +366,14 @@
       "source_group": "global-skills",
       "license": "unspecified",
       "file_count": 4,
-      "package_sha256": "8744c69c808d9fbc7eff3407fc5161fe5590b20ce17fa81189014b5e8ec3d124"
+      "package_sha256": "a6514c57c9306e6dd5fb017971591d3e63878050f353704fef15b763366737df",
+      "file_sha256": {
+        "agents/openai.yaml": "460e438d2e23b688bdfe49ad3c7b4356db7d090d7e9cd5c249278372dab1f31f",
+        "references/review-gate.md": "da5493da24fca3f643e02f9d951fbe038de95bfbf6b622edf3b059784913c928",
+        "references/workbook-schema.md": "fdc1b487b87e6b71608c9264eab20793c0d68cd1dbd4aadcc15a1ead9a9dda42",
+        "SKILL.md": "a8e86b70681300c90af525c7d26199a912170b143ba22e754d3c482bc73bf87c"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-model-adapter",
@@ -177,7 +381,16 @@
       "source_group": "vllm-ascend",
       "license": "Apache-2.0",
       "file_count": 6,
-      "package_sha256": "bf358a4fc723165eaad1a47bcdfdda90ac5a2e321473b4cafb8f8de2ae00ac3b"
+      "package_sha256": "b6a62e287cdea8999d1017473d34bbedb99a16e407d3af6de5a0e29c241b4b4b",
+      "file_sha256": {
+        "references/deliverables.md": "8d62c868a0f8e70bfda82fcdd4b93b91c0c8e6960a75767f46e1ed90cfbe3bc0",
+        "references/fp8-on-npu-lessons.md": "9efee710f5c40b7db4614b1738e900cf652c9628c50d34de030d05c1d45b79b8",
+        "references/multimodal-ep-aclgraph-lessons.md": "898ef91d40b08316d283b3d3c739510ddece56c8aaddc3f9af19c00d25328315",
+        "references/troubleshooting.md": "c75b7a004c6a7d94582fb3098924cfed1fc08a6654d9ba923a99d34e8b8767bd",
+        "references/workflow-checklist.md": "1b0c2ea69a2cb8347f7de1769523f37c57ffd4e1c3adbcf610cd697cd778a7b2",
+        "SKILL.md": "0ef9f14f2e7d1fe6c6967644158504542248965d1870b1a473fb74173ad1b119"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-release",
@@ -185,7 +398,23 @@
       "source_group": "vllm-ascend",
       "license": "Apache-2.0",
       "file_count": 13,
-      "package_sha256": "6ef20c296dbe79b652478b1580f16e715dc1ff8665c1cc206713f821aef12456"
+      "package_sha256": "dfa316ce2df582c51528243b91ecb072329f9d7497c0764f932d981bdbd9cc41",
+      "file_sha256": {
+        "references/ref-past-release-notes-highlight.md": "84b2413a4b356bafaf3018d75ab54c33159327a9907ba385029659181ca006a5",
+        "references/version-files.yaml": "50b0a2b8e44b69bbe8ad172834dde6e7583a9429da3c6971a165bee37981da89",
+        "scripts/fetch_commits.py": "2e982f5938f29763350d80d02375f647056d6d41a8331cc460248c095966db7a",
+        "scripts/generate_announcement.py": "4e14af95db3b800b1ae31f30377b0df62cd9d1895601d049f67e593a71daf406",
+        "scripts/generate_checklist.py": "6946e8345475d7381708cbc33fd46dbc25cca8f7f4b07c31fe23ad35092fdb2e",
+        "scripts/scan_nightly_status.py": "70564ce0b222d3dd73fa63f0ff71772feda0fcf0162cf89eeaf57613b3276950",
+        "scripts/scan_release_bugs.py": "23758d0f76746bc2f8a14cdf76d451c4408050c475fb4b2fdc2394ae2f211a2c",
+        "scripts/scan_test_coverage.py": "dc208f0bf1844ccecb72e4fef7f0bba48ac74ed376fd88c3573b8a5d50579488",
+        "scripts/update_checklist_section.py": "2d19f43b80ea354e765a7b52c24399982131d36f4a7e5523a63a88d99cdec3d8",
+        "scripts/update_version_references.py": "00e11e705542fd6b03e1830d79ed0353819c413f90a6e32ee76846d0da779998",
+        "SKILL.md": "54d237d19339fb2cdb298d2edc02995a4007b2c572a53332ef3d72f6c7867062",
+        "templates/feedback-issue-template.md": "f404242ed1697ac2e86818ddb5d51a52d37310929c043708c24cb98202f74e0a",
+        "templates/release-checklist-template.md": "96379f582ce2d49fd4ca22e6df9c0890eb53d586e6b119f39cf4dea311d88101"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-debug",
@@ -193,7 +422,19 @@
       "source_group": "pd-debug-prototype",
       "license": "unspecified",
       "file_count": 9,
-      "package_sha256": "5738f27be659870c5721f8163f94b98c50eebbd7b2cdfbcf91e8bc279b0295be"
+      "package_sha256": "b14c350237a6e668b8a8cbf1df69548f055e752ffc3504766b9c5fbcabc2bc2b",
+      "file_sha256": {
+        "references/accuracy.md": "4fd2d278fd137693a9ad890927b9e85217433cd7106f9068949fe74b2348e408",
+        "references/async-observation.md": "74c8663c067ea7d3bcdccafaca88f71534223ffe4573c04a5d30af2539373de9",
+        "references/cases.md": "3a277489ecf0c9d7f42c04018ce7f3e3b58af60204fd5d51b3ea8dfcdbcdf239",
+        "references/field-baseline.md": "f7cd264f5212ac6518628b2b68824102bcf81cf36c759c043e7cf2b64e9954a6",
+        "references/functional.md": "6b1889165f06bb74ac8152f3ba821e025a367f09f32dd7a14e7d96f9e130af7f",
+        "references/pd-lifecycle.md": "f2345b0583b230ad037823a62f153ccb2b0373f2a30a3708e3201d6f8c87ea46",
+        "references/performance.md": "b2d4f76e045d91227cbde80ec9ab4bb8c08632a6cdbf2a599e734d113527a1a9",
+        "references/reproduction.md": "b8a9bee2d25fd3f13c5947c0cd5734b3705b1e4f6785d4d937d129777a4cd89f",
+        "SKILL.md": "7ea46a27bca46783c607b1faaf21057f6d379ad23b5353da0f573d0acc1c1ca5"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "debugging-vllm-ascend-pd-accuracy",
@@ -230,7 +471,15 @@
       "source_group": "vllm-ascend-main2main",
       "license": "Apache-2.0",
       "file_count": 5,
-      "package_sha256": "eac825daaf9344d7d28c2e3f344c01f853be1b11bc597fc89fa2c39951db4be3"
+      "package_sha256": "e8dd1097b1f0351fef2a572301a7bac3c3fe758a7362958ca50cc5854dd0bbbb",
+      "file_sha256": {
+        "error-analysis.md": "bee2c861bd8741f4a3c936d7cbdca54209fa17dd113dff3730e398723e18153c",
+        "proactive-upgrade.md": "1d20b0cd1afcc3e5de28fc3af253604233c9456e03f73503c023c26d3c627d4c",
+        "reference/error-patterns.md": "03dac327b8aaddd6de8040f4a635f05f94643bfb7c533be6a48e430d2df78003",
+        "references/versioning-policy.md": "d136d49ad59c7aa72764a76c0611e86972dd0e60a7e5f32cba76d6b68372cddd",
+        "SKILL.md": "cafb766a60fb297ca0daeccc89a91c9989dfafe6adc0734c81d1fdfaee33f974"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "vllm-ascend-release-note-writer",
@@ -238,7 +487,13 @@
       "source_group": "vllm-ascend-legacy-release",
       "license": "Apache-2.0",
       "file_count": 3,
-      "package_sha256": "a95889a6163a900d4798e14fa85ad3d7cbb02cf0f0e762cc2d941ee52ae15a69"
+      "package_sha256": "d222bfb2e9abba5b995c673510ca6e8d81ba384b92d75a851519fa323a55add3",
+      "file_sha256": {
+        "references/ref-past-release-notes-highlight.md": "a0998af23f76eb415a520491b91f8d368a515bd7cde7a03363cdaa200e295d6d",
+        "scripts/fetch_commits-optimize.py": "2e982f5938f29763350d80d02375f647056d6d41a8331cc460248c095966db7a",
+        "SKILL.md": "082382b855ebfa6f59201b3e3d3672aebe04e8b1d9a67bb16d1da687edb8050f"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "driver-peermem-check",
@@ -246,7 +501,12 @@
       "source_group": "hixl",
       "license": "CANN-2.0",
       "file_count": 2,
-      "package_sha256": "f8096a0cdf129670e170f6734a6f278c4501861fabca336744883df2849344f8"
+      "package_sha256": "dcc98cea1e3c9eaa0aaddd0e382e0a6e6265ab678493321aae245c89b47a1080",
+      "file_sha256": {
+        "scripts/check_npu_peermem.sh": "bfc24d07028ff0d525d3bce9e38895bd348f0d666b66f2e6b04cdd19e03751ec",
+        "SKILL.md": "b0dd43de7922775c26d7b060f8e32fc803987874e964a0643395d4b38e98e8e4"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "hixl-ut-generator",
@@ -254,7 +514,11 @@
       "source_group": "hixl",
       "license": "CANN-2.0",
       "file_count": 1,
-      "package_sha256": "c81d0f37d1579177b883f66e0bccc2772187b98d873fb5c3c0c5283b29af7653"
+      "package_sha256": "575844b03388779ec5034ed4e1c7036110446d74fe67e824c0a6c83acc5c6852",
+      "file_sha256": {
+        "SKILL.md": "6f20964bd37dd9743af59c89f774ca75785b2d348bc78be6ca3774bd91cefb4f"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "hixl-srs-doc-generator",
@@ -262,7 +526,13 @@
       "source_group": "hixl",
       "license": "CANN-2.0",
       "file_count": 3,
-      "package_sha256": "73429904360f555d2c426c9e532e3f35770a570cc76fb386cb70960a0d165ad2"
+      "package_sha256": "74088c7e9b30235b66049f4f87f18890f21baae4728af03f51e0aa04239a111e",
+      "file_sha256": {
+        "references/hixl-code-map.md": "ae0421a222cb26bf8e35e0fd5f5de81bcca32a8d99120c7afc02fb62e777c62e",
+        "references/srs-template.md": "7fdb12d36023a6310f946494dfe9f7b45daa72e09e804b66f445ead36290c7aa",
+        "SKILL.md": "eb0afc9f3c328a7c9fce196bb1842882ef38011dfbd03ae2eff2e371deaeaf78"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "hixl-pr-review",
@@ -270,7 +540,16 @@
       "source_group": "hixl",
       "license": "CANN-2.0",
       "file_count": 6,
-      "package_sha256": "b76d53baee178d22a65b767f6e615b4031ca3534a5f7ca8eb3eaf664183f9c84"
+      "package_sha256": "1cd4bbbefbf05f14876f23c41c690bddbc2824ef74c03accdcc49e2266e176c8",
+      "file_sha256": {
+        "references/cpp-general.md": "3803cdf7c7ad7e53db634b7df63e3eb9ff1d3743d6b12a1f1da05f74a3d0adee",
+        "references/cpp-secure.md": "dd0cea8a36bf80a103b46c8cf3b151535a2ac9bf7faaca3fb4021ab0b45a736e",
+        "references/cpp-style.md": "21535c89cab63e842077bd25a244dc6a9ea89383bb9a28e9dc8c61382f96afa1",
+        "references/hixl-review-focus.md": "24ce763ca9eabdc646f3d4b62daf4de53dd7eb3c1fedddbce30df20c6c08a6c1",
+        "references/python-secure.md": "0abab073ae20c284d50b4b36ef459565ffa825dda843829f744042841ca4bfd7",
+        "SKILL.md": "0fcd9cf33c248ebede257a5c78d7dadb0d0c10ff52cf2c340e66a5413500b395"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)"
     },
     {
       "name": "pd-pure-role-benchmark",
@@ -288,6 +567,30 @@
       },
       "imported_on": "2026-10-19",
       "source_note": "Imported pending workspace package; source workspace base c7f899d74a36d0d031f488a3d81bad49de2be724. Does not authorize benchmark execution."
+    },
+    {
+      "name": "ascend-memcache-pooling",
+      "path": "skills/ascend-memcache-pooling",
+      "source_group": "integrated-pooling",
+      "license": "CC0-1.0 AND MIT",
+      "source_note": "zouyida2052 f5108884c387175025eecf2e58021828f802a204 plus Yuli-yx additions; see package NOTICE.",
+      "file_count": 12,
+      "file_sha256": {
+        ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+        "LICENSES/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+        "LICENSES/MIT.txt": "9bb37c92bc28b7d9c151e4d7948f249b3fcca5a56c893627c00ba9e01ae332e3",
+        "NOTICE": "4a5b6149f30634eb5c07a73f7d12c2f7c234bd6ba3618c330d839c00f480c2e8",
+        "references/deployment.md": "a4386a0185a993dbd30673b49a7b1a31172f3183788797bf69247215bbb7bffb",
+        "references/monitoring.md": "d8c38c5f149a3eb91bc8873c351dca6dcad84659defe973ab2dc5ba9902b1fa1",
+        "references/sources.md": "01bd8fcd7604bcc6ec3da2d8d94884b059e88e7199aa76c2e401455db9ba122e",
+        "references/transports.md": "8d33aefad8096723662b2345b356e997036cf3f56cea17ca2c6a9d0aba0dd80f",
+        "references/validation.md": "31879773d92a99f737598b4e138b9c557f983487ec4a9a47f97d5ea69bb177f8",
+        "scripts/cache_metrics.py": "10391af4f2f0a3127d0187cd8d787f09da20110c6046780ce203aedeadae7d6f",
+        "SKILL.md": "dec107f41db6bc246a318f9e0f69cb4b7984427cd9b90f525977b569b3f5f7c6",
+        "tests/test_cache_metrics.py": "8b76032ce9795c4fec6290896d9a56513835695a852f0bbad7c3e5f9b1d23461"
+      },
+      "package_hash_format": "sha256(sorted relative-path + NUL + file-sha256-hex + LF)",
+      "package_sha256": "dc053439ddf9635a6b4bb1849b2609f4085281e3547a78b54e6633a2c5bb7cac"
     }
   ],
   "export_adjustments": [
@@ -322,5 +625,5 @@
     "Three skill frontmatter compatibility issues corrected; legacy release paths corrected; main2main versioning policy bundled.",
     "Package hashes cover relative file paths and file bytes; Python caches are excluded."
   ],
-  "updated_on": "2026-10-19"
+  "updated_on": "2026-10-21"
 }
